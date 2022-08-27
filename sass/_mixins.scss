@@ -1,0 +1,16 @@
+@use "variaveis";
+
+$fontBase: 16;
+@function sizeElement($px, $base: $fontBase) {
+  @return ($px / $base) * 1rem;
+}
+
+@mixin flex-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin baseFont {
+  font-size: $fontBase;
+}

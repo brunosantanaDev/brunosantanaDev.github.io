@@ -11,103 +11,150 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Site portifolio de Bruno Santana, sou desenvolvedor front-end, tenho interesse em me aprofundar em back-end e mobile, futuramente desejo explorar a área de testes aprender inteligência artificial e ciência de dados"
+    />
+    <meta name="author" content="Bruno Henrique Santana Pessanha" />
+    <meta
+      name="keywords"
+      content="front-end, back-end, mobile, programador web, desenvolvedor web, criação de site, programação"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="files/icones/favicon.png" />
+    <script src="js/script.js" defer></script>
     <title>Bruno Santana - Desenvolvedor Front-End e Back-End</title>
   </head>
   <body>
     <header>
       <section class="menu" id="menu" data-section>
         <div class="menu-center" data-center>
-          <a href="#" class="logo">{B}</a>
+          <div class="logo">
+            <a href="https://brunosantanadev.github.io/" blank="_top"
+              >Porti<span>folio</span></a
+            >
+          </div>
+
           <nav class="menu-link">
-            <ul>
-              <li><a href="#home">HOME</a></li>
-              <li><a href="#sobre">SOBRE MIM</a></li>
-              <li><a href="#projetos">PROJETOS</a></li>
-              <li><a href="#habilidades">HABILIDADES</a></li>
-              <li><a href="#contato">CONTATO</a></li>
-              <li>
-                <a class="baixar-cv" href=""
-                  >BAIXAR CV <i class="fa fa-download" aria-hidden="true"></i
-                ></a>
-              </li>
-            </ul>
+            <a href="#home">HOME</a>
+            <a href="#sobre">SOBRE MIM</a>
+            <a href="#projetos">PROJETOS</a>
+            <a href="#habilidades">HABILIDADES</a>
+            <a href="#contato">CONTATO</a>
+            <div class="baixar-cv">
+              <a
+                href="https://brunosantanadev.github.io/files/curriculo_bruno_santana.pdf"
+                >BAIXAR CV <i class="fa fa-download" aria-hidden="true"></i
+              ></a>
+            </div>
           </nav>
         </div>
       </section>
 
       <section class="banner" id="banner" data-section>
-        <div classe="banner-center" data-center>
+        <div class="banner-center" data-center>
           <div class="titulo">
-            <h1>
-              Olá, eu sou <br />
+            <div>
+              <span class="text-linha-1-2">Olá, me chamo </span><br />
               <span data-animaNome>{Bruno Santana}</span>
-              <span data-barraPisca>|</span> <br />
-              Sou Desenvolvedor Front-End.
-            </h1>
-
-            <div class="btn-git">
-              <span>GITHUB</span>
-              <span><img src="" /></span>
+              <span data-barraPisca>|</span><br />
+              <span class="text-linha-1-2">Sou Desenvolvedor Front-End.</span>
             </div>
 
-            <div class="btn-linkedin">
-              <span>LINKEDIN</span>
-              <span><img src="" /></span>
+            <div class="btn-git btn-btn">
+              <a href="https://github.com/brunosantanaDev" target="_blank">
+                <span>GITHUB</span>
+                <span><img src="files/icones/icon-github.png"" /></span>
+              </a>
+            </div>
+
+            <div class="btn-linkedin btn-btn">
+              <a
+                href="https://www.linkedin.com/in/brunosantanadev/"
+                target="_blank"
+              >
+                <span class="text">LINKEDIN</span>
+                <span><img src="files/icones/icon-linkedin.png" /></span>
+              </a>
             </div>
           </div>
 
           <div class="img-banner">
-            <img src="" />
+            <img src="files/imagens/eu-bruno.png" width="503" />
           </div>
         </div>
       </section>
     </header>
 
     <section class="sobre" id="sobre" data-section>
-      <div classe="sobre-center" data-center>
+      <div class="sobre-center" data-center>
         <h2 class="titulo-section">SOBRE MIM</h2>
-        <article>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
-          assumenda molestiae eum, accusantium cum architecto temporibus itaque
-          delectus illum praesentium nemo! Perspiciatis magni sunt similique,
-          veritatis amet ut cupiditate accusamus.<br />
-          <a class="baixar-cv" href=""
-            >BAIXAR CV <i class="fa fa-download" aria-hidden="true"></i
-          ></a>
-        </article>
 
-        <div class="video">
-          <div
-            style="width: 600px; height: 350px; background-color: black"
-          ></div>
+        <div class="menu-sobre-mim">
+          <div class="linha">
+            <div class="celula">HISTORIA</div>
+            <div class="celula">VIDEO</div>
+            <div class="celula">EXPERIÊNCIA</div>
+          </div>
+        </div>
 
-          <a href=""
-            >Para entrar em contato clique aqui e me chame no whatsapp.</a
-          >
+        <div class="card-content-sobre">HISTORIA</div>
+        <div class="card-content-sobre">EXPERIÊNCIA</div>
+
+        <div class="video card-content-sobre">
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="projetos" id="projetos" data-section>
-      <div classe="projetos-center" data-center>
+      <div class="projetos-center" data-center>
+        <div class="prev"><</div>
+        <div class="next">></div>
+
         <h2 class="titulo-section">PROJETOS</h2>
+
         <section class="projeto-mask">
           <section class="projeto-mover">
             <div class="card">
               <div></div>
-              <h2>Nome Projeto</h2>
+              <h3>Nome Projeto</h3>
               <p>Descrição do projeto</p>
             </div>
 
             <div class="card">
-              <div></div>
-              <h2>Nome Projeto</h2>
+              <div>
+                <div class="tarja"></div>
+              </div>
+              <h3>Nome Projeto</h3>
               <p>Descrição do projeto</p>
             </div>
 
             <div class="card">
-              <div></div>
-              <h2>Nome Projeto</h2>
+              <div>
+                <div class="tarja"></div>
+              </div>
+              <h3>Nome Projeto</h3>
               <p>Descrição do projeto</p>
             </div>
           </section>
@@ -116,12 +163,13 @@
     </section>
 
     <section class="habilidades" id="habilidades" data-section>
-      <div classe="habilidades-center" data-center>
+      <div class="habilidades-center" data-center>
         <h2 class="titulo-section">HABILIDADES</h2>
 
         <section>
-          <div class="card-habilidades">
+          <div class="card-habilidades card1">
             <div class="titulo">Front-End</div>
+
             <div class="grid-habilidade">
               <span>GIT e GITHUB</span>
               <span>70%</span>
@@ -164,25 +212,33 @@
 
             <div class="grid-habilidade">
               <span>REACT</span>
-              <span>70%</span>
+              <span>0%</span>
               <div class="barrinha">
                 <div></div>
               </div>
             </div>
           </div>
 
-          <div class="card-habilidades">
+          <div class="card-habilidades card2">
             <div class="titulo">Back-End</div>
+
+            <div class="grid-habilidade">
+              <span>Banco de Dados (Mysql)</span>
+              <span>10%</span>
+              <div class="barrinha">
+                <div></div>
+              </div>
+            </div>
             <div class="grid-habilidade">
               <span>PHP</span>
-              <span>0%</span>
+              <span>10%</span>
               <div class="barrinha">
                 <div></div>
               </div>
             </div>
 
             <div class="grid-habilidade">
-              <span>Banco de Dados (Mysql)</span>
+              <span>Node Js</span>
               <span>0%</span>
               <div class="barrinha">
                 <div></div>
@@ -195,7 +251,7 @@
 
     <footer>
       <section class="contato" id="contato" data-section>
-        <div classe="contato-center" data-center>
+        <div class="contato-center" data-center>
           <h2 class="titulo-section">CONTATO</h2>
 
           <section>
@@ -245,8 +301,11 @@
         </div>
       </section>
 
-      <section class="copy">
-        Bruno Santana - Todos os direitos reservados - &copy <span>2022</span>
+      <section class="rodape" data-section>
+        <div class="rodape-center" data-center>
+          <span>Bruno Santana - Todos os direitos reservados - &copy </span>
+          <span>2022</span>
+        </div>
       </section>
     </footer>
   </body>
