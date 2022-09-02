@@ -32,9 +32,10 @@
     />
     <link href="css/style.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="files/icones/favicon.png" />
-    <script src="js/script.js" defer></script>
-    <title>Bruno Santana - Desenvolvedor Front-End e Back-End</title>
+    <script type="module" src="js/script.js" defer></script>
+    <title>Bruno Santana - Desenvolvedor Web Front-End e Back-End</title>
   </head>
+
   <body>
     <header>
       <section class="menu" id="menu" data-section>
@@ -46,11 +47,14 @@
           </div>
 
           <nav class="menu-link">
-            <a href="#home">HOME</a>
-            <a href="#sobre">SOBRE MIM</a>
-            <a href="#projetos">PROJETOS</a>
-            <a href="#habilidades">HABILIDADES</a>
-            <a href="#contato">CONTATO</a>
+            <div class="links">
+              <a href="#home">HOME</a>
+              <a href="#sobre">SOBRE MIM</a>
+              <a href="#projetos">PROJETOS</a>
+              <a href="#habilidades">HABILIDADES</a>
+              <a href="#contato">CONTATO</a>
+            </div>
+
             <div class="baixar-cv">
               <a
                 href="https://brunosantanadev.github.io/files/curriculo_bruno_santana.pdf"
@@ -64,100 +68,82 @@
       <section class="banner" id="banner" data-section>
         <div class="banner-center" data-center>
           <div class="titulo">
-            <div>
-              <span class="text-linha-1-2">Olá, me chamo </span><br />
-              <span data-animaNome>{Bruno Santana}</span>
-              <span data-barraPisca>|</span><br />
-              <span class="text-linha-1-2">Sou Desenvolvedor Front-End.</span>
-            </div>
+            <div class="titulo-content">
+              <div class="text-content">
+                <span class="text-linha-1-2">Olá, me chamo </span><br />
+                <span data-animaNome>{Bruno Santana}</span>
+                <span data-barraPisca>|</span><br />
+                <span class="text-linha-1-2">Sou Desenvolvedor Front-End.</span>
+              </div>
 
-            <div class="btn-git btn-btn">
-              <a href="https://github.com/brunosantanaDev" target="_blank">
-                <span>GITHUB</span>
-                <span><img src="files/icones/icon-github.png"" /></span>
-              </a>
-            </div>
+              <div class="btn-git btn-btn">
+                <a href="https://github.com/brunosantanaDev" target="_blank">
+                  <span>GITHUB</span>
+                  <span><img src="files/icones/icon-github.png"" /></span>
+                </a>
+              </div>
 
-            <div class="btn-linkedin btn-btn">
-              <a
-                href="https://www.linkedin.com/in/brunosantanadev/"
-                target="_blank"
-              >
-                <span class="text">LINKEDIN</span>
-                <span><img src="files/icones/icon-linkedin.png" /></span>
-              </a>
+              <div class="btn-linkedin btn-btn">
+                <a
+                  href="https://www.linkedin.com/in/brunosantanadev/"
+                  target="_blank"
+                >
+                  <span class="text">LINKEDIN</span>
+                  <span><img src="files/icones/icon-linkedin.png" /></span>
+                </a>
+              </div>
             </div>
           </div>
 
           <div class="img-banner">
-            <img src="files/imagens/eu-bruno.png" width="503" />
+            <img src="files/imagens/eu-bruno.png" width="525" height="558" />
           </div>
         </div>
       </section>
     </header>
 
     <section class="sobre" id="sobre" data-section>
-      <div class="sobre-center" data-center>
+      <section class="sobre-center" data-center>
         <h2 class="titulo-section">SOBRE MIM</h2>
 
         <div class="menu-sobre-mim">
-          <div class="linha">
-            <div class="celula">HISTORIA</div>
-            <div class="celula">VIDEO</div>
-            <div class="celula">EXPERIÊNCIA</div>
-          </div>
+          <div class="celula">HISTORIA</div>
+          <div class="card-content-sobre">HISTORIA content</div>
+          <div class="celula">EXPERIÊNCIA</div>
+          <div class="card-content-sobre">EXPERIÊNCIA content</div>
         </div>
-
-        <div class="card-content-sobre">HISTORIA</div>
-        <div class="card-content-sobre">EXPERIÊNCIA</div>
-
-        <div class="video card-content-sobre">
-          <div>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </div>
+      </section>
     </section>
 
     <section class="projetos" id="projetos" data-section>
       <div class="projetos-center" data-center>
-        <div class="prev"><</div>
-        <div class="next">></div>
-
         <h2 class="titulo-section">PROJETOS</h2>
 
-        <section class="projeto-mask">
-          <section class="projeto-mover">
-            <div class="card">
-              <div></div>
-              <h3>Nome Projeto</h3>
-              <p>Descrição do projeto</p>
-            </div>
+        <section class="projeto-card">
+          <div class="card">
+            <div></div>
+            <h3>Nome Projeto</h3>
+            <p>Descrição do projeto<br /></p>
+            <kbd>Tecnologias: <br />React</kbd>
+          </div>
 
-            <div class="card">
-              <div>
-                <div class="tarja"></div>
-              </div>
-              <h3>Nome Projeto</h3>
-              <p>Descrição do projeto</p>
+          <div class="card">
+            <div>
+              <div class="tarja"></div>
             </div>
+            <h3>Nome Projeto</h3>
+            <p>Descrição do projeto<br /></p>
+            <kbd>Tecnologias: <br />Sass/Js</kbd>
+          </div>
 
-            <div class="card">
-              <div>
-                <div class="tarja"></div>
-              </div>
-              <h3>Nome Projeto</h3>
-              <p>Descrição do projeto</p>
+          <div class="card">
+            <div>
+              <div class="tarja"></div>
             </div>
-          </section>
+            <h3>Nome Projeto</h3>
+            <p>Descrição do projeto<br /></p>
+            <kbd>Tecnologias: <br />Bootstrap/Node</kbd>
+          </div>
         </section>
       </div>
     </section>
@@ -172,7 +158,7 @@
 
             <div class="grid-habilidade">
               <span>GIT e GITHUB</span>
-              <span>70%</span>
+              <span>50%</span>
               <div class="barrinha">
                 <div></div>
               </div>
@@ -180,7 +166,15 @@
 
             <div class="grid-habilidade">
               <span>HTML e CSS</span>
-              <span>80%</span>
+              <span>70%</span>
+              <div class="barrinha">
+                <div></div>
+              </div>
+            </div>
+
+            <div class="grid-habilidade">
+              <span>SASS</span>
+              <span>40%</span>
               <div class="barrinha">
                 <div></div>
               </div>
@@ -195,8 +189,8 @@
             </div>
 
             <div class="grid-habilidade">
-              <span>SASS</span>
-              <span>40%</span>
+              <span>TYPESCRIPT</span>
+              <span>0%</span>
               <div class="barrinha">
                 <div></div>
               </div>
@@ -213,6 +207,14 @@
             <div class="grid-habilidade">
               <span>REACT</span>
               <span>0%</span>
+              <div class="barrinha">
+                <div></div>
+              </div>
+            </div>
+
+            <div class="grid-habilidade">
+              <span>PHOTOSHOP</span>
+              <span>50%</span>
               <div class="barrinha">
                 <div></div>
               </div>
@@ -254,48 +256,74 @@
         <div class="contato-center" data-center>
           <h2 class="titulo-section">CONTATO</h2>
 
-          <section>
-            <div class="dados">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Voluptatem sit assumenda aut, eligendi maxime enim rem vitae
-                tempora exercitationem. Quos eaque id voluptas dolorum ducimus
-                est assumenda laborum aliquam a.
-              </p>
+          <section class="contato-content">
+            <section class="dados">
+              <div class="dados-content">
+                <p>
+                  Utilize o fomuluário para entrar em contato comigo por email
+                  ou se preferir pode entrar em contato pelas minhas redes
+                  sociais ou no meu whtasapp.
+                </p>
 
-              <a href="https://wa.me/5521994395138">+55(21)99439-5138</a>
+                <a class="my-whatsapp" href="https://wa.me/5521994395138"
+                  >+55 (21)99439-5138</a
+                >
 
-              <span>BRUNOSANTANADEV@GMAIL.COM</span>
+                <span class="my-email">BRUNOSANTANADEV@GMAIL.COM</span>
 
-              <div class="redes-sociais">
-                <div class="card">
-                  <img src="" />
-                  <span>GITHUB</span>
-                </div>
+                <div class="redes-sociais">
+                  <div class="card">
+                    <a href="https://github.com/brunosantanaDev" target="_black"
+                      ><img alt="github" src="files/icones/contato-github.png"
+                    /></a>
+                    <span>GITHUB</span>
+                  </div>
 
-                <div class="card">
-                  <img src="" />
-                  <span>LINKDIN</span>
-                </div>
+                  <div class="card">
+                    <a
+                      href="https://www.linkedin.com/in/brunosantanadev/"
+                      target="_black"
+                      ><img
+                        alt="linkedin"
+                        src="files/icones/contato-linkedin.png"
+                    /></a>
+                    <span>LINKEDIN</span>
+                  </div>
 
-                <div class="card">
-                  <img src="" />
-                  <span>INSTAGRAM</span>
+                  <div class="card">
+                    <a
+                      href="https://www.instagram.com/brunosantanadev/"
+                      target="_black"
+                      ><img
+                        alt="instagram"
+                        src="files/icones/contato-instagram.png"
+                    /></a>
+                    <span>INSTAGRAM</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </section>
 
             <div class="form">
-              <form action method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" />
-                <label for="assunto">Assunto:</label>
-                <input type="text" id="assunto" />
-                <label for="empresa">Empresa/Organização:</label>
-                <input type="text" id="empresa" />
-                <textarea name="mensagem" cols="30" rows="10"></textarea>
-                <button>Enviar</button>
-              </form>
+              <div class="form-content">
+                <form action method="post">
+                  <label for="nome">Nome:</label><br />
+                  <input type="text" id="nome" /><br />
+                  <label for="assunto">Assunto:</label><br />
+                  <input type="text" id="assunto" /><br />
+                  <label for="empresa">Empresa/Organização:</label><br />
+                  <input type="text" id="empresa" /><br />
+                  <label for="empresa">Mensagem:</label><br />
+                  <textarea
+                    name="mensagem"
+                    id="mensagem"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                  <br />
+                  <button>Enviar</button>
+                </form>
+              </div>
             </div>
           </section>
         </div>

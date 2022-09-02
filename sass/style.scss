@@ -1,11 +1,14 @@
 @use "variaveis";
 @use "mixins";
 
+//responsivo 962
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  border: 0;
 }
 
 :root {
@@ -20,6 +23,7 @@ body {
 
 [data-section] {
   @include mixins.flex-center;
+  padding: 0 10px;
 }
 
 [data-center] {
@@ -39,230 +43,242 @@ body {
   height: 80px;
   position: sticky;
   z-index: 300;
-}
 
-.menu-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .menu-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  .logo {
-    display: block;
-    color: variaveis.$textColorPrimary;
-    font-size: mixins.sizeElement(35);
-    text-decoration: none;
-    font-weight: 600;
-
-    span {
-      color: variaveis.$textColorSecundary;
-    }
-
-    a {
+    .logo {
+      display: block;
       color: variaveis.$textColorPrimary;
+      font-size: mixins.sizeElement(35);
       text-decoration: none;
-      sup {
-        font-size: mixins.sizeElement(20);
+      font-weight: 600;
+
+      span {
+        color: variaveis.$textColorSecundary;
+      }
+
+      a {
+        color: variaveis.$textColorPrimary;
+        text-decoration: none;
+        sup {
+          font-size: mixins.sizeElement(20);
+        }
       }
     }
   }
-}
 
-.menu-center {
-  .menu-link {
-    list-style-type: none;
-    display: flex;
-    font-size: mixins.sizeElement(14);
-    align-items: center;
-
-    a {
-      text-decoration: none;
-      color: variaveis.$textColorPrimary;
-      margin-right: 10px;
-      padding: 8px 8px;
-    }
-
-    .baixar-cv {
-      font-weight: bold;
-      background-image: linear-gradient(
-        180deg,
-        #132d55,
-        variaveis.$primary-color
-      );
+  .menu-center {
+    .menu-link {
+      list-style-type: none;
       display: flex;
-      justify-content: center;
+      font-size: mixins.sizeElement(14);
       align-items: center;
-      border-radius: 8px;
 
       a {
-        margin-right: 0;
+        text-decoration: none;
+        color: variaveis.$textColorPrimary;
+        margin-right: 10px;
+        padding: 8px 8px;
+      }
+
+      .baixar-cv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        font-weight: bold;
+
+        background-image: linear-gradient(
+          180deg,
+          #132d55,
+          variaveis.$primary-color
+        );
+
+        a {
+          margin-right: 0;
+        }
       }
     }
   }
 }
 
 .banner {
-  background: url("../files/imagens/back-banner.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(
+    -45deg,
+    variaveis.$secondy-color,
+    variaveis.$primary-color 50%
+  );
   height: 540px;
-}
 
-.banner-center {
-  display: flex;
-  justify-content: space-between;
-
-  .titulo {
+  .banner-center {
     display: flex;
-    align-content: center;
-    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
 
-    .btn-btn {
-      height: 70px;
-      max-width: 400px;
-      border-radius: 15px;
-      font-size: mixins.sizeElement(21);
-      font-weight: 400;
+    .titulo {
+      flex: 1 0 390px;
+      display: flex;
+      align-content: center;
+      flex-flow: row wrap;
 
-      a {
-        display: flex;
+      .btn-btn {
+        height: 70px;
+        max-width: 400px;
+        border-radius: 15px;
+        font-size: mixins.sizeElement(21);
+        font-weight: 400;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          text-decoration: none;
+          padding: 15px 140px;
+        }
+      }
+
+      [data-animaNome] {
+        color: variaveis.$secondy-color;
+        font-size: mixins.sizeElement(40);
+        font-weight: 700;
+      }
+
+      .text-linha-1-2 {
+        font-size: mixins.sizeElement(26);
+        color: variaveis.$textColorPrimary;
+      }
+
+      [data-barraPisca] {
+        animation: barraPisca 0.9s infinite;
+        color: variaveis.$quinteryColor;
+        font-size: mixins.sizeElement(40);
+      }
+
+      .btn-git {
         align-items: center;
-        gap: 10px;
-        text-decoration: none;
-        padding: 15px 140px;
+        @include mixins.flex-center;
+        margin: 30px 0 0 0;
+
+        background-image: linear-gradient(
+          180deg,
+          variaveis.$quinteryColor,
+          variaveis.$secondy-color
+        );
+
+        span:nth-child(1) {
+          color: variaveis.$primary-color;
+        }
+      }
+
+      .btn-linkedin {
+        border: 1px solid #ffffff;
+        @include mixins.flex-center;
+        align-items: center;
+        margin: 12px 0 0 0;
+
+        span:nth-child(1) {
+          color: #fff;
+        }
       }
     }
 
-    [data-animaNome] {
-      color: variaveis.$secondy-color;
-      font-size: mixins.sizeElement(40);
-      font-weight: 700;
-    }
-
-    .text-linha-1-2 {
-      font-size: mixins.sizeElement(26);
-      color: variaveis.$textColorPrimary;
-    }
-
-    [data-barraPisca] {
-      animation: barraPisca 0.9s infinite;
-      color: #07ca8c;
-      font-size: mixins.sizeElement(40);
-    }
-
-    .btn-git {
-      align-items: center;
-      @include mixins.flex-center;
-      margin: 30px 0 0 0;
-
-      background-image: linear-gradient(
-        180deg,
-        #07ca8c,
-        variaveis.$secondy-color
-      );
-
-      span:nth-child(1) {
-        color: variaveis.$primary-color;
-      }
-    }
-
-    .btn-linkedin {
-      border: 1px solid #ffffff;
-      @include mixins.flex-center;
-      align-items: center;
-      margin: 12px 0 0 0;
-
-      span:nth-child(1) {
-        color: #fff;
-      }
+    .img-banner {
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      //transform: rotateY(50deg);
+      animation: anima-eu ease-in-out 3s alternate infinite;
+      flex: 1 0 390px;
     }
   }
+}
 
-  .img-banner {
-    display: flex;
-    align-items: flex-end;
+@keyframes anima-eu {
+  from {
+    transform: translateY(60px);
+  }
+  to {
+    transform: translateY(30px);
   }
 }
 
 @keyframes barraPisca {
-  to {
-    opacity: 0;
-  }
   from {
     opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
 .sobre-center {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
-  padding: 0 0 50px 0;
-
-  .menu-sobre-mim {
-    display: table;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-
-    .linha {
-      display: table-row;
-
-      .celula {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-        background: variaveis.$textColorSecundary;
-        color: variaveis.$textColorPrimary;
-        cursor: pointer;
-      }
-    }
-    .celula {
-      width: 300px;
-      height: 50px;
-      border: 0px solid #132a4c;
-      border-start-end-radius: 10px;
-      border-start-start-radius: 10px;
-      margin: 0 10px 0 0;
-    }
-  }
+  padding: 20px 0 50px 0;
 
   .card-content-sobre {
-    //display: none;
-    border: 1px solid #f00;
-    width: 80%;
+    width: 97%;
+    margin: 10px 20px;
   }
 
-  .video {
-    display: flex;
-    justify-content: center;
-  }
-
-  p {
-    color: variaveis.$textColorSecundary;
-    width: 80%;
+  .menu-sobre-mim {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    height: auto;
-  }
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 0 10px 0;
+    flex: 1 0 auto;
+    width: 100%;
 
-  span {
-    display: inline-block;
-    width: 80%;
-    margin: 10px 0 50px 0;
+    .celula {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      border: 2px solid #132a4c;
+      border-radius: 5px;
+      margin: 2px 5px;
+      color: variaveis.$textColorSecundary;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: "+";
+        display: block;
+        font-size: 20px;
+        right: 10px;
+        top: 5px;
+        position: absolute;
+      }
+    }
   }
 }
 
 .projetos {
-  background-color: variaveis.$secondy-color;
+  //background-color: variaveis.$secondy-color;
+  background-image: linear-gradient(
+    45deg,
+    variaveis.$primary-color 40%,
+    variaveis.$secondy-color
+  );
   .projetos-center {
     padding: 0 0 50px 0;
     position: relative;
 
-    .projeto-mover {
-      gap: 20px;
+    .projeto-card {
+      gap: 40px;
       position: relative;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
 
     h2 {
@@ -285,31 +301,12 @@ body {
 
       p {
         color: #fff;
+        margin-bottom: 10px;
+      }
+      kbd {
+        color: variaveis.$quinteryColor;
       }
     }
-  }
-}
-
-.projetos-center {
-  .prev,
-  .next {
-    background: #fff;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(46, 226, 202);
-    cursor: pointer;
-  }
-
-  .prev {
-    left: 50px;
-    top: 50%;
-    position: absolute;
-  }
-  .next {
-    right: 50px;
-    top: 50%;
-    position: absolute;
   }
 }
 
@@ -319,6 +316,7 @@ body {
 
     section {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-evenly;
 
       .card-habilidades {
@@ -378,15 +376,135 @@ body {
 
 .contato {
   background-color: variaveis.$primary-color;
+}
+.contato-center {
+  color: #fff;
+  padding: 0 0 50px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 
-  .contato-center {
+  h2 {
     color: #fff;
-    height: 605px;
+  }
 
-    section {
-      display: flex;
-      justify-content: space-evenly;
-      border: 2px solid #fff;
+  .contato-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+
+  .dados {
+    flex: 1 0 300px;
+    display: flex;
+    justify-content: center;
+
+    .dados-content {
+      p {
+        word-wrap: break-word;
+        font-size: mixins.sizeElement(18);
+      }
+      a.my-whatsapp {
+        display: block;
+        background-color: variaveis.$secondy-color;
+        padding: 10px;
+        width: mixins.sizeElement(210);
+        font-size: mixins.sizeElement(18);
+        border-radius: 10px;
+        text-align: center;
+        color: variaveis.$textColorPrimary;
+        text-decoration: none;
+        margin-top: 20px;
+      }
+      .my-email {
+        display: block;
+        margin-top: 45px;
+      }
+      .redes-sociais {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 48px;
+
+        .card {
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          gap: 10px;
+          margin-right: 57px;
+
+          img {
+            width: 73px;
+            height: 72px;
+          }
+          span {
+            visibility: hidden;
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: transform 1s ease-out, opacity 1s ease-out;
+          }
+          &:hover {
+            span {
+              visibility: visible;
+              transform: translateY(0px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .form {
+    flex: 1 0 300px;
+    display: flex;
+    justify-content: flex-end;
+
+    .form-content {
+      label {
+        font-weight: 600;
+      }
+      input,
+      textarea {
+        color: variaveis.$textColorSecundary;
+        font-size: mixins.sizeElement(18);
+        border-radius: 12px;
+        font-weight: 600;
+      }
+      input {
+        width: 257px;
+        height: 35px;
+        margin: 5px 0 15px 0;
+        padding: 1px 20px;
+      }
+      textarea {
+        width: 332px;
+        height: 112px;
+        padding: 5px 20px;
+      }
+      button {
+        background-image: linear-gradient(
+          180deg,
+          variaveis.$quinteryColor,
+          variaveis.$secondy-color
+        );
+        color: variaveis.$textColorPrimary;
+        height: 38px;
+        width: 216px;
+        border-radius: 10px;
+        font-size: mixins.sizeElement(18);
+        margin: 10px 0 0 0;
+        cursor: pointer;
+        border: 2px solid variaveis.$quinteryColor;
+        &:hover {
+          background-image: linear-gradient(
+            180deg,
+            variaveis.$secondy-color,
+            variaveis.$quinteryColor
+          );
+        }
+      }
     }
   }
 }
@@ -398,6 +516,7 @@ body {
   .rodape-center {
     display: flex;
     justify-content: center;
+    align-items: center;
     color: #fff;
   }
 }
