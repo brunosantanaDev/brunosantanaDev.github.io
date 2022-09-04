@@ -23,7 +23,7 @@ body {
 
 [data-section] {
   @include mixins.flex-center;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 [data-center] {
@@ -43,6 +43,10 @@ body {
   height: 80px;
   position: sticky;
   z-index: 300;
+
+  .menu-hamburguer {
+    display: none;
+  }
 
   .menu-center {
     display: flex;
@@ -127,7 +131,7 @@ body {
 
       .btn-btn {
         height: 70px;
-        max-width: 400px;
+        width: 400px;
         border-radius: 15px;
         font-size: mixins.sizeElement(21);
         font-weight: 400;
@@ -137,7 +141,7 @@ body {
           align-items: center;
           gap: 10px;
           text-decoration: none;
-          padding: 15px 140px;
+          padding: 15px 130px;
         }
       }
 
@@ -190,9 +194,8 @@ body {
       display: flex;
       align-items: flex-end;
       position: relative;
-      //transform: rotateY(50deg);
       animation: anima-eu ease-in-out 3s alternate infinite;
-      flex: 1 0 390px;
+      flex: 1 0 400px;
     }
   }
 }
@@ -323,7 +326,7 @@ body {
         border: 1px solid variaveis.$primary-color;
         border-radius: 15px;
         width: mixins.sizeElement(355);
-        padding: 57px 12px 35px 12px;
+        padding: 57px 15px 35px 15px;
         position: relative;
 
         .titulo {
@@ -518,5 +521,97 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
+  }
+}
+
+@include mixins.responsivo(tela985) {
+  .banner {
+    height: auto;
+  }
+  .img-banner {
+    display: flex;
+    align-items: flex-start;
+    flex: 1 0 380px;
+    img {
+      width: 450px;
+    }
+  }
+
+  .dados {
+    margin-bottom: 50px;
+    .dados-content {
+      width: 80% !important;
+    }
+  }
+
+  .form {
+    justify-content: center !important;
+  }
+}
+
+@include mixins.responsivo(tela937) {
+  .banner-center {
+    .titulo {
+      margin-top: 40px;
+      justify-content: center;
+    }
+
+    .img-banner {
+      border: 0px solid red;
+      display: flex;
+      justify-content: center;
+      // width: 200px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include mixins.responsivo(tela875) {
+  .menu-link {
+    .links {
+      display: none;
+    }
+
+    .menu-hamburguer {
+      display: block;
+      margin: 0 20px 0 0;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .sobre-center {
+    padding-top: 60px;
+  }
+}
+
+@include mixins.responsivo(tela810) {
+  .card-habilidades {
+    margin: 0 15px 50px 15px;
+  }
+}
+
+@include mixins.responsivo(tela480) {
+  .logo {
+    position: relative;
+    top: -4px;
+    a {
+      font-size: mixins.sizeElement(29);
+    }
+  }
+}
+
+@include mixins.responsivo(tela445) {
+  .titulo {
+    .btn-btn {
+      height: 60px !important;
+      width: 350px !important;
+
+      a {
+        padding: 15px 110px !important;
+      }
+    }
   }
 }

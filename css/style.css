@@ -21,7 +21,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 [data-center] {
@@ -40,6 +40,9 @@ body {
   height: 80px;
   position: sticky;
   z-index: 300;
+}
+.menu .menu-hamburguer {
+  display: none;
 }
 .menu .menu-center {
   display: flex;
@@ -105,7 +108,7 @@ body {
 }
 .banner .banner-center .titulo .btn-btn {
   height: 70px;
-  max-width: 400px;
+  width: 400px;
   border-radius: 15px;
   font-size: 1.3125rem;
   font-weight: 400;
@@ -115,7 +118,7 @@ body {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  padding: 15px 140px;
+  padding: 15px 130px;
 }
 .banner .banner-center .titulo [data-animaNome] {
   color: #05935d;
@@ -158,7 +161,7 @@ body {
   align-items: flex-end;
   position: relative;
   animation: anima-eu ease-in-out 3s alternate infinite;
-  flex: 1 0 390px;
+  flex: 1 0 400px;
 }
 
 @keyframes anima-eu {
@@ -268,7 +271,7 @@ body {
   border: 1px solid #193866;
   border-radius: 15px;
   width: 22.1875rem;
-  padding: 57px 12px 35px 12px;
+  padding: 57px 15px 35px 15px;
   position: relative;
 }
 .habilidades .habilidades-center section .card-habilidades .titulo {
@@ -434,6 +437,80 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
+}
+
+@media only screen and (max-width: 985px) {
+  .banner {
+    height: auto;
+  }
+  .img-banner {
+    display: flex;
+    align-items: flex-start;
+    flex: 1 0 380px;
+  }
+  .img-banner img {
+    width: 450px;
+  }
+  .dados {
+    margin-bottom: 50px;
+  }
+  .dados .dados-content {
+    width: 80% !important;
+  }
+  .form {
+    justify-content: center !important;
+  }
+}
+@media only screen and (max-width: 937px) {
+  .banner-center .titulo {
+    margin-top: 40px;
+    justify-content: center;
+  }
+  .banner-center .img-banner {
+    border: 0px solid red;
+    display: flex;
+    justify-content: center;
+  }
+  .banner-center .img-banner img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 875px) {
+  .menu-link .links {
+    display: none;
+  }
+  .menu-link .menu-hamburguer {
+    display: block;
+    margin: 0 20px 0 0;
+    position: relative;
+    top: 2px;
+  }
+  .sobre-center {
+    padding-top: 60px;
+  }
+}
+@media only screen and (max-width: 810px) {
+  .card-habilidades {
+    margin: 0 15px 50px 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .logo {
+    position: relative;
+    top: -4px;
+  }
+  .logo a {
+    font-size: 1.8125rem;
+  }
+}
+@media only screen and (max-width: 445px) {
+  .titulo .btn-btn {
+    height: 60px !important;
+    width: 350px !important;
+  }
+  .titulo .btn-btn a {
+    padding: 15px 110px !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

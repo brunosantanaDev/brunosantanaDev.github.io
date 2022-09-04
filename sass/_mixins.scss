@@ -14,3 +14,31 @@ $fontBase: 16;
 @mixin baseFont {
   font-size: $fontBase;
 }
+
+@mixin responsivo($tela) {
+  @if $tela == tela985 {
+    @media only screen and (max-width: 985px) {
+      @content;
+    }
+  } @else if $tela == tela937 {
+    @media only screen and (max-width: 937px) {
+      @content;
+    }
+  } @else if $tela == tela875 {
+    @media only screen and (max-width: 875px) {
+      @content;
+    }
+  } @else if $tela == tela810 {
+    @media only screen and (max-width: 810px) {
+      @content;
+    }
+  } @else if $tela == tela480 {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  } @else if $tela == tela445 {
+    @media only screen and (max-width: 445px) {
+      @content;
+    }
+  }
+}

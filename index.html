@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shink-to-fit=no"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -37,7 +40,7 @@
   </head>
 
   <body>
-    <header>
+    <header id="home">
       <section class="menu" id="menu" data-section>
         <div class="menu-center" data-center>
           <div class="logo">
@@ -54,7 +57,13 @@
               <a href="#habilidades">HABILIDADES</a>
               <a href="#contato">CONTATO</a>
             </div>
-
+            <div class="menu-hamburguer">
+              <img
+                src="files/icones/menu_hamburgue.png"
+                width="35"
+                heigth="35"
+              />
+            </div>
             <div class="baixar-cv">
               <a
                 href="https://brunosantanadev.github.io/files/curriculo_bruno_santana.pdf"
@@ -79,7 +88,7 @@
               <div class="btn-git btn-btn">
                 <a href="https://github.com/brunosantanaDev" target="_blank">
                   <span>GITHUB</span>
-                  <span><img src="files/icones/icon-github.png"" /></span>
+                  <span><img src="files/icones/icon-github.png" /></span>
                 </a>
               </div>
 
@@ -96,161 +105,156 @@
           </div>
 
           <div class="img-banner">
-            <img src="files/imagens/eu-bruno.png" width="525" height="558" />
+            <img src="files/imagens/eu-bruno.png" />
           </div>
         </div>
       </section>
     </header>
 
-    <section class="sobre" id="sobre" data-section>
-      <section class="sobre-center" data-center>
-        <h2 class="titulo-section">SOBRE MIM</h2>
+    <main>
+      <section class="sobre" id="sobre" data-section>
+        <section class="sobre-center" data-center>
+          <h2 class="titulo-section">SOBRE MIM</h2>
+          <div>Div</div>
+        </section>
+      </section>
 
-        <div class="menu-sobre-mim">
-          <div class="celula">HISTORIA</div>
-          <div class="card-content-sobre">HISTORIA content</div>
-          <div class="celula">EXPERIÊNCIA</div>
-          <div class="card-content-sobre">EXPERIÊNCIA content</div>
+      <section class="projetos" id="projetos" data-section>
+        <div class="projetos-center" data-center>
+          <h2 class="titulo-section">PROJETOS</h2>
+
+          <section class="projeto-card">
+            <div class="card">
+              <div></div>
+              <h3>Nome Projeto</h3>
+              <p>Descrição do projeto<br /></p>
+              <kbd>Tecnologias: <br />React</kbd>
+            </div>
+
+            <div class="card">
+              <div>
+                <div class="tarja"></div>
+              </div>
+              <h3>Nome Projeto</h3>
+              <p>Descrição do projeto<br /></p>
+              <kbd>Tecnologias: <br />Sass/Js</kbd>
+            </div>
+
+            <div class="card">
+              <div>
+                <div class="tarja"></div>
+              </div>
+              <h3>Nome Projeto</h3>
+              <p>Descrição do projeto<br /></p>
+              <kbd>Tecnologias: <br />Bootstrap/Node</kbd>
+            </div>
+          </section>
         </div>
       </section>
-    </section>
 
-    <section class="projetos" id="projetos" data-section>
-      <div class="projetos-center" data-center>
-        <h2 class="titulo-section">PROJETOS</h2>
+      <section class="habilidades" id="habilidades" data-section>
+        <div class="habilidades-center" data-center>
+          <h2 class="titulo-section">HABILIDADES</h2>
 
-        <section class="projeto-card">
-          <div class="card">
-            <div></div>
-            <h3>Nome Projeto</h3>
-            <p>Descrição do projeto<br /></p>
-            <kbd>Tecnologias: <br />React</kbd>
-          </div>
+          <section>
+            <div class="card-habilidades card1">
+              <div class="titulo">Front-End</div>
 
-          <div class="card">
-            <div>
-              <div class="tarja"></div>
-            </div>
-            <h3>Nome Projeto</h3>
-            <p>Descrição do projeto<br /></p>
-            <kbd>Tecnologias: <br />Sass/Js</kbd>
-          </div>
+              <div class="grid-habilidade">
+                <span>GIT e GITHUB</span>
+                <span>50%</span>
+                <div class="barrinha">
+                  <div></div>
+                </div>
+              </div>
 
-          <div class="card">
-            <div>
-              <div class="tarja"></div>
-            </div>
-            <h3>Nome Projeto</h3>
-            <p>Descrição do projeto<br /></p>
-            <kbd>Tecnologias: <br />Bootstrap/Node</kbd>
-          </div>
-        </section>
-      </div>
-    </section>
+              <div class="grid-habilidade">
+                <span>HTML e CSS</span>
+                <span>70%</span>
+                <div class="barrinha">
+                  <div></div>
+                </div>
+              </div>
 
-    <section class="habilidades" id="habilidades" data-section>
-      <div class="habilidades-center" data-center>
-        <h2 class="titulo-section">HABILIDADES</h2>
+              <div class="grid-habilidade">
+                <span>SASS</span>
+                <span>40%</span>
+                <div class="barrinha">
+                  <div></div>
+                </div>
+              </div>
 
-        <section>
-          <div class="card-habilidades card1">
-            <div class="titulo">Front-End</div>
+              <div class="grid-habilidade">
+                <span>JAVASCRIPT</span>
+                <span>45%</span>
+                <div class="barrinha">
+                  <div></div>
+                </div>
+              </div>
 
-            <div class="grid-habilidade">
-              <span>GIT e GITHUB</span>
-              <span>50%</span>
-              <div class="barrinha">
-                <div></div>
+              <div class="grid-habilidade">
+                <span>TYPESCRIPT</span>
+                <span>0%</span>
+                <div class="barrinha">
+                  <div></div>
+                </div>
+              </div>
+
+              <div class="grid-habilidade">
+                <span>BOOTSTRAP</span>
+                <span>0%</span>
+                <div class="barrinha">
+                  <div></div>
+                </div>
+              </div>
+
+              <div class="grid-habilidade">
+                <span>REACT</span>
+                <span>0%</span>
+                <div class="barrinha">
+                  <div></div>
+                </div>
+              </div>
+
+              <div class="grid-habilidade">
+                <span>PHOTOSHOP</span>
+                <span>50%</span>
+                <div class="barrinha">
+                  <div></div>
+                </div>
               </div>
             </div>
 
-            <div class="grid-habilidade">
-              <span>HTML e CSS</span>
-              <span>70%</span>
-              <div class="barrinha">
-                <div></div>
+            <div class="card-habilidades card2">
+              <div class="titulo">Back-End</div>
+
+              <div class="grid-habilidade">
+                <span>Banco de Dados (Mysql)</span>
+                <span>10%</span>
+                <div class="barrinha">
+                  <div></div>
+                </div>
+              </div>
+              <div class="grid-habilidade">
+                <span>PHP</span>
+                <span>10%</span>
+                <div class="barrinha">
+                  <div></div>
+                </div>
+              </div>
+
+              <div class="grid-habilidade">
+                <span>Node Js</span>
+                <span>0%</span>
+                <div class="barrinha">
+                  <div></div>
+                </div>
               </div>
             </div>
-
-            <div class="grid-habilidade">
-              <span>SASS</span>
-              <span>40%</span>
-              <div class="barrinha">
-                <div></div>
-              </div>
-            </div>
-
-            <div class="grid-habilidade">
-              <span>JAVASCRIPT</span>
-              <span>45%</span>
-              <div class="barrinha">
-                <div></div>
-              </div>
-            </div>
-
-            <div class="grid-habilidade">
-              <span>TYPESCRIPT</span>
-              <span>0%</span>
-              <div class="barrinha">
-                <div></div>
-              </div>
-            </div>
-
-            <div class="grid-habilidade">
-              <span>BOOTSTRAP</span>
-              <span>0%</span>
-              <div class="barrinha">
-                <div></div>
-              </div>
-            </div>
-
-            <div class="grid-habilidade">
-              <span>REACT</span>
-              <span>0%</span>
-              <div class="barrinha">
-                <div></div>
-              </div>
-            </div>
-
-            <div class="grid-habilidade">
-              <span>PHOTOSHOP</span>
-              <span>50%</span>
-              <div class="barrinha">
-                <div></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-habilidades card2">
-            <div class="titulo">Back-End</div>
-
-            <div class="grid-habilidade">
-              <span>Banco de Dados (Mysql)</span>
-              <span>10%</span>
-              <div class="barrinha">
-                <div></div>
-              </div>
-            </div>
-            <div class="grid-habilidade">
-              <span>PHP</span>
-              <span>10%</span>
-              <div class="barrinha">
-                <div></div>
-              </div>
-            </div>
-
-            <div class="grid-habilidade">
-              <span>Node Js</span>
-              <span>0%</span>
-              <div class="barrinha">
-                <div></div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-
+          </section>
+        </div>
+      </section>
+    </main>
     <footer>
       <section class="contato" id="contato" data-section>
         <div class="contato-center" data-center>
