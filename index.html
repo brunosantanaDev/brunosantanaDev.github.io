@@ -308,19 +308,20 @@
             <div class="form">
               <div class="form-content">
                 <form name="contato" method="post" data-netlify="true">
-                  <label for="nome">Nome:</label><br />
+                  <label for="nome">Nome: *</label><br />
                   <input type="text" id="nome" name="nome" /><br />
-                  <label for="assunto">Assunto:</label><br />
-                  <input type="text" id="assunto" name="assunto"/><br />
+                  <label for="email-whatsapp">Email ou Whatsapp:</label><br />
+                  <input type="text" id="email-whatsapp" name="email-whatsapp" required/><br />
+                  <label for="assunto">Assunto: *</label><br />
+                  <input type="text" id="assunto" name="assunto" required/><br />
                   <label for="empresa">Empresa/Organização:</label><br />
                   <input type="text" id="empresa" name="empresa" /><br />
-                  <label for="empresa">Mensagem:</label><br />
-                  <textarea
+                  <label for="empresa">Mensagem: *</label><br />
+                  <textarea 
                     name="mensagem"
                     id="mensagem"
                     cols="30"
-                    rows="10"
-                  ></textarea>
+                    rows="10" required></textarea>
                   <br />
                   <button>Enviar</button>
                 </form>
