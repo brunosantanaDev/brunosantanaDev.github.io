@@ -1,8 +1,27 @@
-@use "variaveis";
+$primeira-cor: #222222; 
+$segunda-cor: #b98b59;
+$terceira-cor: #fff;
+$quarta-cor: #d4ad83;
+$quinta-cor:#000000; 
+
+$texto-cor-primeira: #222222;
+$texto-cor-segunda: #c3c3c3;
+$texto-cor-terceira: #fff;
+$texto-cor-quarta: #b98b59;
+
+
+img {
+  display: block;
+  max-width:100%
+}
 
 $fontBase: 16;
 @function sizeElement($px, $base: $fontBase) {
   @return ($px / $base) * 1rem;
+}
+
+@mixin imgBg($img){
+  background: url("../files/imagens/#{$img}");
 }
 
 @mixin flex-center {
@@ -15,29 +34,29 @@ $fontBase: 16;
   font-size: $fontBase;
 }
 
+$desktop: 1000px;
+$tablet: 760px;
+$celular: 480px;
+
 @mixin responsivo($tela) {
-  @if $tela == tela985 {
-    @media only screen and (max-width: 985px) {
+  @if $tela == desktop {
+    //De 1101 pra cima
+    @media only screen and (min-width: #{$desktop + 101}) {
       @content;
     }
-  } @else if $tela == tela937 {
-    @media only screen and (max-width: 937px) {
+  } @else if $tela == desktop2 {
+    //Entre 1000 a 1100
+    @media only screen and (min-width: $desktop) and (max-width: #{$desktop + 100}) {
       @content;
     }
-  } @else if $tela == tela875 {
-    @media only screen and (max-width: 875px) {
+  } @else if $tela == tablet {
+    //Entre 760 a 999
+    @media only screen and (min-width: $tablet) and (max-width: #{$desktop - 1}) {
       @content;
     }
-  } @else if $tela == tela810 {
-    @media only screen and (max-width: 810px) {
-      @content;
-    }
-  } @else if $tela == tela480 {
-    @media only screen and (max-width: 480px) {
-      @content;
-    }
-  } @else if $tela == tela445 {
-    @media only screen and (max-width: 445px) {
+  } @else if $tela == celular {
+    //Entre 0 a 759
+    @media only screen and (max-width: #{$tablet - 1}) {
       @content;
     }
   }

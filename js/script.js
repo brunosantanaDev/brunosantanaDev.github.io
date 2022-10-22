@@ -1,5 +1,9 @@
-document.documentElement.className += " .js";
+document.documentElement.className += " js";
 
-import initLinkInterno from "./modulos/links-interno.js";
+import initScrollSuaveLinkInterno from "./modulos/scrollSuaveLinksInterno.js";
+import initAnimaNome from "./modulos/animaNome.js";
+import initMenuHamburgue from "./modulos/menu-hamburgue.js";
 
-initLinkInterno();
+initScrollSuaveLinkInterno();
+initAnimaNome();
+initMenuHamburgue();

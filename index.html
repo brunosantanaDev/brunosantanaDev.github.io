@@ -26,13 +26,9 @@
       content="Site portifolio de Bruno Santana, sou desenvolvedor front-end, tenho interesse em me aprofundar em back-end e mobile, futuramente desejo explorar a área de testes aprender inteligência artificial e ciência de dados"
     />
     <meta name="author" content="Bruno Henrique Santana Pessanha" />
-    <meta
-      name="keywords"
-      content="front-end, back-end, mobile, programador web, desenvolvedor web, criação de site, programação"
-    />
+    <meta name="keywords" content="front-end, back-end, mobile, programador web, desenvolvedor web, criação de site, programação"/>
     <link href="css/style.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="files/icones/favicon.png" />
-    <script type="module" src="js/script.js" defer></script>
     <title>Bruno Santana - Desenvolvedor Web Front-End e Back-End</title>
   </head>
 
@@ -41,9 +37,8 @@
       <section class="menu" id="menu" data-section>
         <div class="menu-center" data-center>
           <div class="logo">
-            <a href="https://brunosantanadev.github.io/" blank="_top"
-              >Porti<span>folio</span></a
-            >
+            <a href="index.html" blank="_top"
+              >Porti<span>folio</span></a>
           </div>
 
           <nav class="menu-link">
@@ -54,19 +49,13 @@
               <a href="#habilidades">HABILIDADES</a>
               <a href="#contato">CONTATO</a>
             </div>
-            <div class="menu-hamburguer">
-              <img
-                src="files/icones/menu_hamburgue.png"
-                width="35"
-                heigth="35"
-              />
+
+            <div class="pointer-hamburguer">
+              <div class="menu-hamburguer"></div>
             </div>
+
             <div class="baixar-cv">
-              <a
-                href="https://brunosantanadev.github.io/files/curriculo_bruno_santana.pdf"
-                >BAIXAR CV <i class="fa fa-download" aria-hidden="true"></i
-              ></a>
-            </div>
+              <a href="https://brunosantanadev.github.io/files/curriculo_bruno_santana.pdf" target="_blank">BAIXAR CV <i class="fa fa-download" aria-hidden="true"></i></a></div>
           </nav>
         </div>
       </section>
@@ -77,15 +66,17 @@
             <div class="titulo-content">
               <div class="text-content">
                 <span class="text-linha-1-2">Olá, me chamo </span><br />
-                <span data-animaNome>{Bruno Santana}</span>
-                <span data-barraPisca>|</span><br />
+                <div>
+                  <span data-animaNome>{Bruno Santana}</span>
+                  <span data-barraPisca>|</span>
+                </div>
                 <span class="text-linha-1-2">Sou Desenvolvedor Front-End.</span>
               </div>
 
               <div class="btn-git btn-btn">
                 <a href="https://github.com/brunosantanaDev" target="_blank">
                   <span>GITHUB</span>
-                  <span><img src="files/icones/icon-github.png" /></span>
+                  <span><img src="files/icones/icon-github.png" alt="Icone do github"/></span>
                 </a>
               </div>
 
@@ -95,14 +86,14 @@
                   target="_blank"
                 >
                   <span class="text">LINKEDIN</span>
-                  <span><img src="files/icones/icon-linkedin.png" /></span>
+                  <span><img src="files/icones/icon-linkedin.png" alt="Icone o linkdin" /></span>
                 </a>
               </div>
             </div>
           </div>
 
           <div class="img-banner">
-            <img src="files/imagens/eu-bruno.png" />
+            <img src="files/imagens/programming.svg" alt="Imagem representativa de um programador web"/>
           </div>
         </div>
       </section>
@@ -112,7 +103,7 @@
       <section class="sobre" id="sobre" data-section>
         <section class="sobre-center" data-center>
           <h2 class="titulo-section">SOBRE MIM</h2>
-          <div>Div</div>
+          <div>Em desenvolvimento</div>
         </section>
       </section>
 
@@ -122,7 +113,9 @@
 
           <section class="projeto-card">
             <div class="card">
-              <div></div>
+              <div>
+                <div class="tarja">EM BREVE<br>Em Desenvolvimento</div>
+              </div>
               <h3>Nome Projeto</h3>
               <p>Descrição do projeto<br /></p>
               <kbd>Tecnologias: <br />React</kbd>
@@ -130,7 +123,7 @@
 
             <div class="card">
               <div>
-                <div class="tarja"></div>
+                <div class="tarja">EM BREVE<br>Em Desenvolvimento</div>
               </div>
               <h3>Nome Projeto</h3>
               <p>Descrição do projeto<br /></p>
@@ -139,7 +132,7 @@
 
             <div class="card">
               <div>
-                <div class="tarja"></div>
+                 <div class="tarja">EM BREVE<br>Em Desenvolvimento</div>
               </div>
               <h3>Nome Projeto</h3>
               <p>Descrição do projeto<br /></p>
@@ -261,8 +254,7 @@
             <section class="dados">
               <div class="dados-content">
                 <p>
-                  Utilize o fomuluário para entrar em contato comigo por email
-                  ou se preferir pode entrar em contato pelas minhas redes
+                  Utilize o fomuluário para entrar em contato comigo ou se preferir pode entrar em contato pelas minhas redes
                   sociais ou no meu whtasapp.
                 </p>
 
@@ -333,10 +325,15 @@
 
       <section class="rodape" data-section>
         <div class="rodape-center" data-center>
-          <span>Bruno Santana - Todos os direitos reservados - &copy </span>
-          <span>2022</span>
+          <span>Bruno Santana - Todos os direitos reservados - &copy 
+            <span data-ano>2022</span>
+          </span>
         </div>
       </section>
     </footer>
+    <div class="bookmark">
+      <a href="#home"><img src="files/icones/bookmark.png" alt="Subir ao topo"></a>
+    </div>
+  <script type="module" src="js/script.js"></script>
   </body>
 </html>
