@@ -8,6 +8,7 @@
   box-sizing: border-box;
   outline: none;
   border: 0;
+  word-wrap: break-word;
 }
 
 body {
@@ -22,9 +23,17 @@ body {
 }
 
 [data-center] {
-  max-width: 1100px;
+  max-width: #{$desktop + 100};
   width: 100%;
   padding: 70px 0 60px 0;
+
+@include responsivo(tablet){
+  max-width: #{$tablet};
+}
+@include responsivo(celular){
+  max-width: #{$celular};
+}
+
 
   h2 {
     color: $primeira-cor;
@@ -37,12 +46,8 @@ body {
 .menu {
   background-color: $primeira-cor;
   height: 80px;
-  position: sticky;
+  position: relative;
   z-index: 300;
-
-@include responsivo(descktop2){}
-@include responsivo(tablet){}
-@include responsivo(celular){}
 
   .menu-center {
     display: flex;
@@ -50,6 +55,12 @@ body {
     align-items: center;
 
     .pointer-hamburguer{
+      display: none;
+      max-width: 30px;
+      height: auto;
+      padding: 12px 0px;
+      cursor: pointer;
+
       @include responsivo(tablet){
          display: block;
       }
@@ -57,12 +68,6 @@ body {
       @include responsivo(celular){
          display: block;
       }
-
-      display: none;
-      max-width: 30px;
-      height: auto;
-      padding: 12px 0px;
-      cursor: pointer;
     }
 
     .menu-hamburguer {
@@ -117,6 +122,10 @@ body {
       font-size: sizeElement(35);
       text-decoration: none;
       font-weight: 600;
+  
+      @include responsivo(celular){
+        display: none;
+      }
 
       span {
         color: $texto-cor-segunda;
@@ -125,10 +134,6 @@ body {
       a {
         color: $texto-cor-terceira;
         text-decoration: none;
-
-        sup {
-          font-size: sizeElement(20);
-        }
       }
     }
   }
@@ -141,6 +146,11 @@ body {
       display: flex;
       font-size: sizeElement(14);
       align-items: center;
+
+      @include responsivo(celular){
+        justify-content: space-between;
+        width: 100%;
+      }
 
       .links{
         @include responsivo(tablet){
@@ -172,6 +182,10 @@ body {
         font-weight: bold;
         background-image: linear-gradient(180deg, $segunda-cor ,$quarta-cor);
         margin-left: 20px;
+
+        @include responsivo(celular){
+          order: 1;
+        }
         
         a {
             color: $texto-cor-primeira;
@@ -185,24 +199,67 @@ body {
   background-image: linear-gradient(-45deg, $quinta-cor, $primeira-cor 50% );
   height: 540px;
 
+  @include responsivo(tablet){
+    height: auto;
+  }
+  @include responsivo(celular){
+    height: auto;
+  }
+
   .banner-center {
     display: flex;
     justify-content: space-between;
     position: relative;
     flex-wrap: wrap;
 
+      @include responsivo(tablet){
+        display: block;
+      }
+      @include responsivo(celular){
+        display: block;
+      }
+
     .titulo {
       flex: 1 0 480px;
       display: flex;
-      align-items: center;
       flex-flow: row wrap;
+
+      @include responsivo(tablet){
+        margin-bottom: 50px;
+        display: block;
+      }
+      @include responsivo(celular){
+        display: block;
+        margin-bottom: 50px;
+      }
+
+
+
+      .titulo-content{
+        @include responsivo(celular){
+          max-width: 300px;
+          margin: 0 auto;
+        }
+        @include responsivo(tablet){
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+      }
 
       .btn-btn {
         height: 70px;
-        width: 400px;
+        max-width: 400px;
+        width:100%;
         border-radius: 15px;
         font-size: sizeElement(21);
         font-weight: 400;
+        position: relative;
+        z-index:300;
+
+        @include responsivo(celular){
+          max-width: 320px;
+        }
 
         a {
           display: flex;
@@ -210,6 +267,9 @@ body {
           gap: 10px;
           text-decoration: none;
           padding: 15px 130px;
+          @include responsivo(celular){
+            padding: 15px 80px;
+          }
         }
       }
 
@@ -217,17 +277,24 @@ body {
         color: $segunda-cor;
         font-size: sizeElement(40);
         font-weight: 700;
+        @include responsivo(celular){
+          font-size: sizeElement(32);
+        }
+      }
+
+      .text-linha-1-2 {
+        font-size: sizeElement(26);
+        color: $texto-cor-terceira;
+
+        @include responsivo(celular){
+          font-size: sizeElement(20);
+        }
       }
 
       .text-content{
         div{
             margin: 6px 0;
         }
-      }
-  
-      .text-linha-1-2 {
-        font-size: sizeElement(26);
-        color: $texto-cor-terceira;
       }
 
       [data-barraPisca] {
@@ -264,6 +331,12 @@ body {
       flex: 1 0 463px;
       position: relative;
       top: -30px;
+      @include responsivo(tablet){
+        flex: 1 0 480px;
+      }
+      @include responsivo(celular){
+        flex:1 0 350px;
+      }
 
       img{
         animation: anima-eu ease-in-out 3s alternate infinite;
@@ -410,8 +483,8 @@ body {
 
         .titulo {
           text-align: center;
-          padding: 5px 0;
-          color: $texto-cor-primeira;
+          padding-top:8px;
+          color: $texto-cor-terceira;
           background-color: $segunda-cor;
           border-radius: 15px;
           width: sizeElement(141);
@@ -432,7 +505,7 @@ body {
             justify-self: end;
           }
           span {
-            color: $texto-cor-segunda;
+            color: $texto-cor-primeira;
             font-size: sizeElement(18);
           }
 
@@ -472,18 +545,34 @@ body {
     justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
+    
+    @include responsivo(tablet){
+      display: block;
+    }
+    @include responsivo(celular){
+      display: block;
+    }
   }
 
   .dados {
     flex: 1 0 480px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    @include responsivo(tablet){
+      flex: 1 0 480px;
+      justify-content: center;
+    }
+    @include responsivo(celular){
+      flex:1 0 280px;
+      justify-content: center;
+    }
 
     .dados-content {
       max-width: 400px;
+      width: 90%;
 
       p {
-        word-wrap: break-word;
+        word-wrap:  break-word;
         font-size: sizeElement(18);
       }
 
@@ -509,17 +598,21 @@ body {
         display: flex;
         justify-content: flex-start;
         margin-top: 48px;
+    
+        @include responsivo(celular){
+          justify-content: space-evenly;
+        }
 
         .card {
           display: flex;
           flex-flow: column nowrap;
           align-items: center;
           gap: 10px;
-          margin-right: 57px;
+          margin-right: 20px;
+          font-size: sizeElement(12);
 
           img {
-            width: 73px;
-            height: 72px;
+            width: 63px;
           }
 
           span {
@@ -546,8 +639,31 @@ body {
     display: flex;
     justify-content: center;
 
+    @include responsivo(tablet){
+      flex: none;
+      display: block;
+      margin-top: 50px;
+    }
+    @include responsivo(celular){
+      flex: none;
+      display: block;
+      margin-top: 50px;
+    }
+
+
     .form-content {
 
+      @include responsivo(tablet){
+        margin: 0 auto;
+        max-width: 600px;
+        width: 100%;
+      }
+      @include responsivo(celular){
+        margin: 0 auto;
+        max-width: 479px;
+        width: 100%;
+      }
+  
       label {
         font-weight: 600;
       }
@@ -564,12 +680,30 @@ body {
         height: 35px;
         margin: 5px 0 15px 0;
         padding: 1px 20px;
+
+        @include responsivo(tablet){
+          width: 90%;
+        }
+        @include responsivo(celular){
+          width: 100%;
+        }
       }
 
       textarea {
         width: 332px;
         height: 112px;
         padding: 5px 20px;
+        margin-top: 6px;
+        resize: none;
+
+        @include responsivo(tablet){
+          max-width: 600px;
+          width: 100%;
+        }
+        @include responsivo(celular){
+          max-width: 480px;
+          width: 100%;
+        }
       }
 
       button {

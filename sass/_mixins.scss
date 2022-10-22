@@ -39,14 +39,10 @@ $tablet: 760px;
 $celular: 480px;
 
 @mixin responsivo($tela) {
+
   @if $tela == desktop {
-    //De 1101 pra cima
-    @media only screen and (min-width: #{$desktop + 101}) {
-      @content;
-    }
-  } @else if $tela == desktop2 {
-    //Entre 1000 a 1100
-    @media only screen and (min-width: $desktop) and (max-width: #{$desktop + 100}) {
+    // 1100 pra cima
+    @media only screen and (min-width: $desktop) {
       @content;
     }
   } @else if $tela == tablet {
