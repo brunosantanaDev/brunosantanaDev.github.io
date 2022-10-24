@@ -40,12 +40,12 @@ export default function initMenuHamburgue(){
           links.removeAttribute("data-outside");
           links.classList.remove("ativo");
           menuBurguer.classList.remove("ativo");
-
           useEvents.forEach((events) => {
             html.removeEventListener(events, removeEvents);
           });
         }
       });
+
     }    
   }
   

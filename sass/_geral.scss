@@ -552,10 +552,24 @@ body {
       flex-wrap: wrap;
       justify-content: space-evenly;
 
+      .card1{
+
+        @include responsivo(celular){
+          margin-top: 30px;
+        }
+        @include responsivo(tablet){
+          margin-top: 30px; 
+        }
+      }
+
       .card2{
 
         @include responsivo(celular){
-          margin-top: 50px;
+          margin-top: 60px;
+        }
+
+        @include responsivo(tablet){
+          margin-top: 60px; 
         }
       }
 
@@ -563,8 +577,17 @@ body {
         border: 1px solid $primeira-cor;
         border-radius: 15px;
         width: sizeElement(355);
-        padding: 57px 15px 35px 15px;
+        padding: 75px 20px 35px 20px;
         position: relative;
+
+        @include responsivo(celular){
+         flex: 0 1 350px;
+        }
+
+        @include responsivo(tablet){
+         flex: 0 1 400px;
+        }
+
 
         .titulo {
           text-align: center;
@@ -575,11 +598,14 @@ body {
           width: sizeElement(141);
           height: sizeElement(35);
           top: -15px;
-          left: 30%;
+          left: 40%;
           position: absolute;
 
           @include responsivo(celular){
-            left: 27%;
+            left: 32%;
+          }
+          @include responsivo(tablet){
+            left: 35%;
           }
         }
 
@@ -608,7 +634,6 @@ body {
             div {
               border-radius: 12px;
               background-color: $segunda-cor;
-              width: 70%;
               height: 13px;
             }
           }
