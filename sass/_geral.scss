@@ -27,12 +27,12 @@ body {
   width: 100%;
   padding: 70px 0 60px 0;
 
-@include responsivo(tablet){
-  max-width: #{$tablet};
-}
-@include responsivo(celular){
-  max-width: #{$celular};
-}
+  @include responsivo(tablet){
+    max-width: #{$tablet};
+  }
+  @include responsivo(celular){
+    max-width: #{$celular};
+  }
 
 
   h2 {
@@ -50,9 +50,10 @@ body {
   z-index: 300;
 
   .menu-center {
+    padding:0; //reset padding padrao do data-center
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     .pointer-hamburguer{
       display: none;
@@ -62,11 +63,13 @@ body {
       cursor: pointer;
 
       @include responsivo(tablet){
-         display: block;
+        display: block;
+        order: 2;
       }
 
       @include responsivo(celular){
-         display: block;
+        display: block;
+        order: 2;
       }
     }
 
@@ -124,7 +127,7 @@ body {
       font-weight: 600;
   
       @include responsivo(celular){
-        display: none;
+        font-size: sizeElement(20);
       }
 
       span {
@@ -136,10 +139,6 @@ body {
         text-decoration: none;
       }
     }
-  }
-
-  .menu-center {
-    padding:0;
 
     .menu-link {
       list-style-type: none;
@@ -148,15 +147,21 @@ body {
       align-items: center;
 
       @include responsivo(celular){
-        justify-content: space-between;
+        justify-content: flex-end;
+        gap:20px;
+        width: 100%;
+      }
+      @include responsivo(tablet){
+        justify-content: flex-end;
+        gap:20px;
         width: 100%;
       }
 
       .links{
+
         @include responsivo(tablet){
           display: none;
         }
-
         @include responsivo(celular){
          display: none;
         }
@@ -184,6 +189,9 @@ body {
         margin-left: 20px;
 
         @include responsivo(celular){
+          order: 1;
+        }
+        @include responsivo(tablet){
           order: 1;
         }
         
@@ -223,6 +231,7 @@ body {
       flex: 1 0 480px;
       display: flex;
       flex-flow: row wrap;
+      align-items: center;
 
       @include responsivo(tablet){
         margin-bottom: 50px;
@@ -234,8 +243,8 @@ body {
       }
 
 
-
       .titulo-content{
+
         @include responsivo(celular){
           max-width: 300px;
           margin: 0 auto;
@@ -244,7 +253,6 @@ body {
           max-width: 400px;
           margin: 0 auto;
         }
-
       }
 
       .btn-btn {
@@ -277,8 +285,9 @@ body {
         color: $segunda-cor;
         font-size: sizeElement(40);
         font-weight: 700;
+
         @include responsivo(celular){
-          font-size: sizeElement(32);
+          font-size: sizeElement(30);
         }
       }
 
@@ -302,6 +311,10 @@ body {
         animation: barraPisca 0.9s infinite;
         color: $segunda-cor;
         font-size: sizeElement(40);
+        
+        @include responsivo(celular){
+          font-size: sizeElement(30);
+        }
       }
 
       .btn-git {
@@ -310,7 +323,7 @@ body {
         margin: 30px 0 0 0;
         background-image: linear-gradient(180deg, $quarta-cor, $segunda-cor);
 
-        span:nth-child(1) {
+        span {
           color: $primeira-cor;
         }
       }
@@ -321,8 +334,8 @@ body {
         align-items: center;
         margin: 12px 0 0 0;
 
-        span:nth-child(1) {
-          color: #fff;
+        span {
+          color: $texto-cor-terceira;
         }
       }
     }
@@ -331,6 +344,7 @@ body {
       flex: 1 0 463px;
       position: relative;
       top: -30px;
+
       @include responsivo(tablet){
         flex: 1 0 480px;
       }
@@ -339,13 +353,13 @@ body {
       }
 
       img{
-        animation: anima-eu ease-in-out 3s alternate infinite;
+        animation: anima-img-banner ease-in-out 2s alternate infinite;
       }
     }
   }
 }
 
-@keyframes anima-eu {
+@keyframes anima-img-banner {
   from {
     transform: translateY(60px);
   }
@@ -412,14 +426,17 @@ body {
   background: $primeira-cor;
 
   .projetos-center {
-    position: relative;
-   
+      
     .projeto-card {
-      gap: 40px;
-      position: relative;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      gap: 40px;
+
+      @include responsivo(tablet){
+        justify-content: flex-start;
+        padding-left: 8%;
+      }
     }
 
     h2 {
@@ -474,6 +491,13 @@ body {
       flex-wrap: wrap;
       justify-content: space-evenly;
 
+      .card2{
+
+        @include responsivo(celular){
+          margin-top: 50px;
+        }
+      }
+
       .card-habilidades {
         border: 1px solid $primeira-cor;
         border-radius: 15px;
@@ -492,6 +516,10 @@ body {
           top: -15px;
           left: 30%;
           position: absolute;
+
+          @include responsivo(celular){
+            left: 27%;
+          }
         }
 
         .grid-habilidade {
@@ -584,20 +612,20 @@ body {
         font-size: sizeElement(18);
         border-radius: 10px;
         text-align: center;
-        color: $texto-cor-primeira;
+        color: $texto-cor-terceira;
         text-decoration: none;
         margin-top: 20px;
       }
 
       .my-email {
         display: block;
-        margin-top: 45px;
+        margin-top: 25px;
       }
 
       .redes-sociais {
         display: flex;
         justify-content: flex-start;
-        margin-top: 48px;
+        margin-top: 35px;
     
         @include responsivo(celular){
           justify-content: space-evenly;
