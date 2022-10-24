@@ -1,5 +1,6 @@
 @import "reset";
 @import "mixins";
+@import "animacoes";
 
 
 * {
@@ -102,6 +103,9 @@ body {
     }
 
    .pointer-hamburguer.ativo{
+      position: relative;
+      z-index: 300;
+
       .menu-hamburguer {
         height: 0;
         top: 5px;
@@ -145,6 +149,7 @@ body {
       display: flex;
       font-size: sizeElement(14);
       align-items: center;
+     // position: relative;
 
       @include responsivo(celular){
         justify-content: flex-end;
@@ -158,12 +163,51 @@ body {
       }
 
       .links{
-
+        
         @include responsivo(tablet){
-          display: none;
+         display: none;
+          height: 100vh;
+          background-color: $quarta-cor;
+          position: absolute;
+          z-index: 299;
+          overflow: hidden;
+          top:80px;
+          right:0;
+
+          a{
+            display: block;
+            color:#000;
+            text-align: center; 
+          }
+         
+          &.ativo{
+            display: block;
+            width: 70%;
+            animation: openBurguer .5s forwards;
+          }
         }
         @include responsivo(celular){
-         display: none;
+          display: none;
+          height: 100vh;
+          background-color: $quarta-cor;
+          position: absolute;
+          z-index: 299;
+          overflow: hidden;
+          top:80px;
+          right:0;
+          transition: all .5s;
+
+          a{
+            display: block;
+            color:#000;
+            text-align: center; 
+          }
+         
+          &.ativo{
+            display: block;
+            width: 70%;
+            animation: openBurguer .5s forwards;
+          }
         }
       }
 
@@ -203,6 +247,19 @@ body {
   }
 }
 
+@keyframes openBurguer{
+  from{
+    opacity: 0;
+     width: 0%;
+  }
+  top{
+    opacity: 0;
+     width: 70%;
+  }
+}
+
+
+
 .banner {
   background-image: linear-gradient(-45deg, $quinta-cor, $primeira-cor 50% );
   height: 540px;
@@ -232,6 +289,8 @@ body {
       display: flex;
       flex-flow: row wrap;
       align-items: center;
+      position: relative;
+      z-index: 10;
 
       @include responsivo(tablet){
         margin-bottom: 50px;
@@ -344,6 +403,8 @@ body {
       flex: 1 0 463px;
       position: relative;
       top: -30px;
+      position: relative;
+      z-index: 10;
 
       @include responsivo(tablet){
         flex: 1 0 480px;
@@ -586,6 +647,7 @@ body {
     flex: 1 0 480px;
     display: flex;
     justify-content: flex-end;
+
     @include responsivo(tablet){
       flex: 1 0 480px;
       justify-content: center;
@@ -602,6 +664,7 @@ body {
       p {
         word-wrap:  break-word;
         font-size: sizeElement(18);
+        line-height: lineheight(18);
       }
 
       a.my-whatsapp {
@@ -773,6 +836,7 @@ body {
 .bookmark{
   display: inline-block;
   position: fixed;
+  z-index: 1000;
   bottom: 10px;
   right: 10px;
 }

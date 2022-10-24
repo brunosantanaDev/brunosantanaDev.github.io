@@ -15,9 +15,24 @@ img {
   max-width:100%
 }
 
+@mixin openBurguer{
+  @keyframes openBurguer{
+    from{
+        height: 0vh;
+    }
+    top{
+      height: 50vh;
+    }
+  }
+}
+
 $fontBase: 16;
 @function sizeElement($px, $base: $fontBase) {
   @return ($px / $base) * 1rem;
+}
+
+@function lineheight($px, $base: 1.4){
+  @return ($px * $base) + px;
 }
 
 @mixin imgBg($img){

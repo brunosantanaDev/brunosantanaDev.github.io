@@ -18,7 +18,6 @@ export default function initBarrinhas(){
   barrinhas.forEach((item, index) => {
   let span = item.querySelector("span:nth-child(2)");
       span.innerText = valorBarra[index].valor + "%";
-
       item.querySelector(".barrinha div").style.width = valorBarra[index].valor + "%";
   });
 }
