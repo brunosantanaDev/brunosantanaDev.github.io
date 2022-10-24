@@ -175,9 +175,13 @@ body {
           right:0;
 
           a{
-            display: block;
-            color:#000;
-            text-align: center; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 48px;
+            font-weight: 600;
+            color: #000;
+            border-bottom: 1px solid $segunda-cor;
           }
          
           &.ativo{
@@ -198,9 +202,13 @@ body {
           transition: all .5s;
 
           a{
-            display: block;
-            color:#000;
-            text-align: center; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 48px;
+            font-weight: 600;
+            color: #000;
+            border-bottom: 1px solid $segunda-cor;
           }
          
           &.ativo{
@@ -257,8 +265,6 @@ body {
      width: 70%;
   }
 }
-
-
 
 .banner {
   background-image: linear-gradient(-45deg, $quinta-cor, $primeira-cor 50% );
@@ -547,7 +553,7 @@ body {
 .habilidades {
   .habilidades-center {
 
-    section {
+    .habilidade-content {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
@@ -574,10 +580,11 @@ body {
       }
 
       .card-habilidades {
+        display: block;
         border: 1px solid $primeira-cor;
         border-radius: 15px;
         width: sizeElement(355);
-        padding: 75px 20px 35px 20px;
+        padding: 40px 20px 35px 20px;
         position: relative;
 
         @include responsivo(celular){
@@ -588,24 +595,24 @@ body {
          flex: 0 1 400px;
         }
 
-
         .titulo {
+          margin: 0 auto;
           text-align: center;
-          padding-top:8px;
+          padding-top:9px;
           color: $texto-cor-terceira;
           background-color: $segunda-cor;
           border-radius: 15px;
           width: sizeElement(141);
           height: sizeElement(35);
-          top: -15px;
-          left: 40%;
-          position: absolute;
+          top: -58px;
+          position: relative;
+        
 
           @include responsivo(celular){
-            left: 32%;
+            //left: 32%;
           }
           @include responsivo(tablet){
-            left: 35%;
+            //left: 35%;
           }
         }
 

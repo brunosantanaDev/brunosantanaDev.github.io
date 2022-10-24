@@ -1,12 +1,12 @@
 export default function initMenuHamburgue(){
-  const menuBurguer = document.querySelector(".pointer-hamburguer");
-  const links = document.querySelector(".links");
-  const eventos = ["click","touchstart"];
+  const menuBurguer = document.querySelector(".js .pointer-hamburguer");
+  const links = document.querySelector(".js .links");
+  const eventos = ["click"];
 
-
-  function handleOpenMenu(event){
+  function handleOpenMenu(){
     this.classList.add("ativo");
     links.classList.add("ativo");
+    document.body.style.overflow = "hidden";
     
     outsideClick(links, eventos, () => {
       this.classList.remove("ativo");
@@ -14,44 +14,46 @@ export default function initMenuHamburgue(){
     });
   }
 
+  eventos.forEach(evento => {
+    menuBurguer.addEventListener(evento, handleOpenMenu);
+  })
+
   function outsideClick(element, useEvents, callbackRemove){
     const html = document.documentElement;
 
     if(!element.hasAttribute("data-outside")){
-      useEvents.forEach(event => {
-        setTimeout(()=>{html.addEventListener(event, removeEvents)});
+      useEvents.forEach(evento => {
+        setTimeout(() => {
+          html.addEventListener(evento, removeAlls);
+        });
       });    
       element.setAttribute("data-outside", "");
     }
 
-    function removeEvents(event){
+    function removeAlls(event){
       if(!element.contains(event.target)){
+        document.body.removeAttribute("style");
         element.removeAttribute("data-outside");
         callbackRemove();
         useEvents.forEach((events) => {
-          html.removeEventListener(events, removeEvents);
-        });
+          html.removeEventListener(events, removeAlls);
+        }); 
       }
 
       const clickLink = links.querySelectorAll("a");
-
       clickLink.forEach(link => {
         if(link == event.target){
+          document.body.removeAttribute("style");
           links.removeAttribute("data-outside");
           links.classList.remove("ativo");
           menuBurguer.classList.remove("ativo");
-          useEvents.forEach((events) => {
-            html.removeEventListener(events, removeEvents);
+          useEvents.forEach(events => {
+            html.removeEventListener(events, removeAlls);
           });
         }
       });
-
     }    
   }
-  
-  ["touchstart","click"].forEach(eventos => {
-    menuBurguer.addEventListener(eventos, handleOpenMenu);
-  })
 }
 
 
