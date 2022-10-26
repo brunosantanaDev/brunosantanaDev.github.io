@@ -7,13 +7,11 @@ export default function initMenuHamburgue(){
     function handleOpenMenu(){
       this.classList.add("ativo");
       links.classList.add("ativo");
-      links.classList.remove("inativo");
       document.body.style.overflow = "hidden";
       
       outsideClick(links, eventos, () => {
         this.classList.remove("ativo");
         links.classList.remove("ativo");
-        links.classList.add("inativo");
       });
     }
 
@@ -60,7 +58,6 @@ export default function initMenuHamburgue(){
         });
       }    
     }
-
 
   }
 }

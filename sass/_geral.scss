@@ -175,7 +175,10 @@ body {
       .links{
         
         @include responsivo(tablet){
-         display: none;
+          display: block;
+          width: 0%;
+          opacity: 0;
+          transition: .3s;
           height: 100vh;
           background-color: $quarta-cor;
           position: absolute;
@@ -197,11 +200,14 @@ body {
           &.ativo{
             display: block;
             width: 70%;
-            animation: openBurguer .5s forwards;
+            opacity: 1;
           }
         }
         @include responsivo(celular){
-          display: none;
+          display: block;
+          width: 0%;
+          opacity: 0;
+          transition: .3s;
           height: 100vh;
           background-color: $quarta-cor;
           position: absolute;
@@ -209,7 +215,7 @@ body {
           overflow: hidden;
           top:80px;
           right:0;
-
+         
           a{
             display: flex;
             justify-content: center;
@@ -223,12 +229,7 @@ body {
           &.ativo{
             display: block;
             width: 70%;
-            animation: openBurguer .4s forwards;
-          }
-          &.inativo{
-            display: block;
-            width: 0%;
-            animation: closeBurguer .4s forwards;
+            opacity: 1;
           }
         }
       }

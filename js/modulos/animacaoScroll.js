@@ -1,5 +1,5 @@
 //desktop
-export function animacaoDesktop(){
+export default function animacaoScroll(){
   const sections = document.querySelectorAll(".js [data-center]");
   const metadeTela = window.innerHeight * 0.6;
 
@@ -16,8 +16,7 @@ export function animacaoDesktop(){
     });
   }
 
-  handleAnimaAoScroll()
+  handleAnimaAoScroll();
   window.addEventListener("scroll", handleAnimaAoScroll);
 }
 
-export function animacaoMobile(){}
