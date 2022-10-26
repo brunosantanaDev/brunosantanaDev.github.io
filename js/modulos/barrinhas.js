@@ -15,11 +15,13 @@ export default function initBarrinhas(){
 
   const barrinhas = document.querySelectorAll(".js .grid-habilidade");
 
-  barrinhas.forEach((item, index) => {
-  let span = item.querySelector("span:nth-child(2)");
+  if(barrinhas){
+    barrinhas.forEach((barrinha, index) => {
+    let span = barrinha.querySelector("span:nth-child(2)");
       span.innerText = valorBarra[index].valor + "%";
-      item.querySelector(".barrinha div").style.width = valorBarra[index].valor + "%";
-  });
+      barrinha.querySelector(".barrinha div").style.width = valorBarra[index].valor + "%";
+    });
+  }
 }
 
 

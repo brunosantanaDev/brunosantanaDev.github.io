@@ -4,7 +4,7 @@ export default function initScrollSuaveLinkInterno() {
   const bookmark = document.querySelector(".bookmark a");
   links[0].classList.add("ativo");
 
-  if(links.length){
+  if(links.length && menu_links){
     function handleScrollSuave(event){
       event.preventDefault();
       const href = this.getAttribute("href");  

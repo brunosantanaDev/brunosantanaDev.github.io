@@ -149,17 +149,14 @@ body {
       display: flex;
       font-size: sizeElement(14);
       align-items: center;
-     // position: relative;
 
       @include responsivo(celular){
         justify-content: flex-end;
         gap:20px;
-        width: 100%;
       }
       @include responsivo(tablet){
         justify-content: flex-end;
         gap:20px;
-        width: 100%;
       }
 
       .links{
@@ -199,7 +196,6 @@ body {
           overflow: hidden;
           top:80px;
           right:0;
-          transition: all .5s;
 
           a{
             display: flex;
@@ -214,7 +210,12 @@ body {
           &.ativo{
             display: block;
             width: 70%;
-            animation: openBurguer .5s forwards;
+            animation: openBurguer .4s forwards;
+          }
+          &.inativo{
+            display: block;
+            width: 0%;
+            animation: closeBurguer .4s forwards;
           }
         }
       }
@@ -238,17 +239,20 @@ body {
         border-radius: 8px;
         font-weight: bold;
         background-image: linear-gradient(180deg, $segunda-cor ,$quarta-cor);
-        margin-left: 20px;
+        margin-left: 20px;        
 
         @include responsivo(celular){
           order: 1;
+          margin-left: 0;
         }
         @include responsivo(tablet){
           order: 1;
+          margin-left: 0;
         }
         
         a {
-            color: $texto-cor-primeira;
+          color: $texto-cor-primeira;
+          padding: 8px 8px 4px 8px !important;
         }
       }
     }
@@ -258,13 +262,25 @@ body {
 @keyframes openBurguer{
   from{
     opacity: 0;
-     width: 0%;
+    width: 0%;
   }
-  top{
-    opacity: 0;
-     width: 70%;
+  to{
+    opacity: 1;
+    width: 70%;
   }
 }
+
+@keyframes closeBurguer{
+  from{
+    opacity: 1;
+     width: 70%;
+  }
+  to{
+    opacity: 0;
+    width: 0%;
+  }
+}
+
 
 .banner {
   background-image: linear-gradient(-45deg, $quinta-cor, $primeira-cor 50% );
