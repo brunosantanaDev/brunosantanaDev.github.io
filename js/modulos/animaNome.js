@@ -6,12 +6,12 @@ export default function initAnimaNome() {
       const letras = nomeArray.slice();
       nome.innerText = "";
     
-    window.onload = function (){   
-      letras.forEach((letra,index) => {
-        setTimeout(() => {
-        nome.innerText += letra;
-        },index * 300);
-      }); 
+      window.onload = function (){   
+        letras.forEach((letra,index) => {
+          setTimeout(() => {
+          nome.innerText += letra;
+          },index * 300);
+        }); 
     }
   }
 }
