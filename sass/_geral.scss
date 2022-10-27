@@ -237,7 +237,7 @@ body {
 
       a {
         text-decoration: none;
-        color: $texto-cor-segunda;
+        color: $texto-cor-quinta;
         padding: 8px 8px;
         position: relative;
         border-bottom: 4px solid transparent;
@@ -489,6 +489,7 @@ body {
       p{
         line-height: lineheight(14);
         margin-bottom: 20px;
+        color: $texto-cor-segunda;
       }
 
       @include responsivo(celular){
@@ -512,6 +513,15 @@ body {
     }
 
     .sobre-card:nth-child(2){
+
+      img{
+        transform: scale();
+        transition: .5s;
+      }
+      img:hover{
+        transform: scale(1.2);
+      }
+
       @include responsivo(celular){
         order: 0;
       }
@@ -529,44 +539,6 @@ body {
         order: 2;
         max-width: 635px;
         width: 100%;
-      }
-    }
-  }
-
-  .card-content-sobre {
-    width: 97%;
-    margin: 10px 20px;
-  }
-
-  .menu-sobre-mim {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 0 10px 0;
-    flex: 1 0 auto;
-    width: 100%;
-
-    .celula {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 40px;
-      border: 2px solid #132a4c;
-      border-radius: 5px;
-      margin: 2px 5px;
-      color: $texto-cor-segunda;
-      font-weight: 600;
-      cursor: pointer;
-      position: relative;
-
-      &::after {
-        content: "+";
-        display: block;
-        font-size: 20px;
-        right: 10px;
-        top: 5px;
-        position: absolute;
       }
     }
   }
@@ -948,11 +920,28 @@ body {
 }
 
 .bookmark{
+  width: 40px;
   display: inline-block;
   position: fixed;
   z-index: 1000;
   bottom: 10px;
   right: 10px;
+  animation: animabook 1.5s ease-out alternate infinite;
+  opacity: 0;
+  transition: 1.5s;
+
+  &.ativo{
+    opacity: 1;
+  }
+}
+
+@keyframes animabook{
+  from{
+    transform: translate3d(0,-20px,0);
+  }
+  to{
+    transform: translate3d(0,0px,0);
+  }
 }
 
 
