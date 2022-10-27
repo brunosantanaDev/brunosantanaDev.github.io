@@ -12,6 +12,7 @@
   word-wrap: break-word;
 }
 
+
 body {
   font-family: "Open Sans", "Poppins", sans-serif;
   font-size: sizeElement(16);
@@ -29,7 +30,7 @@ body {
   padding: 70px 0 60px 0;
 }
 
-[data-center].ativo {
+[data-js-section].ativo [data-center] {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -284,18 +285,6 @@ body {
   }
 }
 
-@keyframes closeBurguer{
-  from{
-    opacity: 1;
-     width: 70%;
-  }
-  to{
-    opacity: 0;
-    width: 0%;
-  }
-}
-
-
 .banner {
   background-image: linear-gradient(-45deg, $quinta-cor, $primeira-cor 50% );
   height: 540px;
@@ -403,7 +392,7 @@ body {
 
       [data-barraPisca] {
         display: inline;
-        animation: barraPisca 0.9s infinite;
+        animation: barraPisca 0.8s infinite;
         color: $segunda-cor;
         font-size: sizeElement(40);
         
@@ -440,7 +429,7 @@ body {
       position: relative;
       top: -30px;
       position: relative;
-      z-index: 10;
+      z-index: 5;
 
       @include responsivo(tablet){
         flex: 1 0 480px;
@@ -450,7 +439,7 @@ body {
       }
 
       img{
-        animation: anima-img-banner ease-in-out 2s alternate infinite;
+        animation: anima-img-banner ease-in-out 3s alternate infinite;
       }
     }
   }
@@ -479,6 +468,70 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+
+  .sobre-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width:100%;
+
+    .sobre-card{
+        border: 0px solid #dedfe0;
+        max-width: 300px;
+        width:100%;
+        padding: 10px;
+
+      h3{
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      p{
+        line-height: lineheight(14);
+        margin-bottom: 20px;
+      }
+
+      @include responsivo(celular){
+        margin: 20px 0 40px 0;
+      }
+      @include responsivo(tablet){
+        margin: 20px 0 40px 0;
+      }
+    }
+
+    .sobre-card:nth-child(1){
+      border-bottom: 2px solid #d3d3d3;
+      @include responsivo(celular){
+       order: 1;
+      border-bottom: 2px solid #d3d3d3;
+      }
+      @include responsivo(tablet){
+       order: 1;
+      border-bottom: 0px solid #d3d3d3;
+      }
+    }
+
+    .sobre-card:nth-child(2){
+      @include responsivo(celular){
+        order: 0;
+      }
+      @include responsivo(tablet){
+        order: 0;
+      }
+    }
+
+    .sobre-card:nth-child(3){
+     border-bottom: 2px solid #d3d3d3;
+      @include responsivo(celular){
+        order: 2;
+      }
+      @include responsivo(tablet){
+        order: 2;
+        max-width: 635px;
+        width: 100%;
+      }
+    }
+  }
 
   .card-content-sobre {
     width: 97%;
@@ -808,7 +861,7 @@ body {
 
       @include responsivo(tablet){
         margin: 0 auto;
-        max-width: 600px;
+        max-width: 500px;
         width: 100%;
       }
       @include responsivo(celular){
@@ -835,7 +888,7 @@ body {
         padding: 1px 20px;
 
         @include responsivo(tablet){
-          width: 90%;
+             width: 100%;
         }
         @include responsivo(celular){
           width: 100%;
@@ -850,7 +903,6 @@ body {
         resize: none;
 
         @include responsivo(tablet){
-          max-width: 600px;
           width: 100%;
         }
         @include responsivo(celular){

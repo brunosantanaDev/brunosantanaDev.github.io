@@ -34,7 +34,7 @@
 
   <body>
     <header id="home">
-      <section class="menu" id="menu" data-section>
+      <section class="menu" id="menu" data-section >
         <div class="menu-center" data-center-neutro>
           <div class="logo">
             <a href="index.html" blank="_top">Porti<span>fólio</span></a>
@@ -60,7 +60,7 @@
         </div>
       </section>
 
-      <section class="banner" id="banner" data-section>
+      <section class="banner" id="banner" data-section data-js-section>
         <div class="banner-center" data-center>
           <div class="titulo">
             <div class="titulo-content">
@@ -99,14 +99,34 @@
     </header>
 
     <main>
-      <section class="sobre" id="sobre" data-section>
+      <section class="sobre" id="sobre" data-section data-js-section>
         <section class="sobre-center" data-center>
           <h2 class="titulo-section">SOBRE MIM</h2>
-          <div>Em desenvolvimento</div>
+          <div class="sobre-cards">
+            <div class="sobre-card">
+              <h3>História:</h3>
+              <p>Aos 17 anos me interessei pela web e foi amor a primeira vista, mais com o tempo acabei desanimando.</p>
+
+              <p> Agora em 2020 ápos o término de um relacionamento voltei a estudar e desde então sigo  aprimorando minhas habilidades no front-end. </p>
+
+              <p>Além do front-end gosto muito do banck-end que foi o meu primeiro contato com linguagem de programação com PHP. </p>
+            </div>
+            <div class="sobre-card">
+              <img src="files/imagens/eu-bruno.png">
+            </div>
+            <div class="sobre-card">
+              <h3>Formação Acadêmica:</h3>
+              <p>Curso Superior de Tecnologia Em Análise e Desenvolvimento de Sistemas</p>
+              <h3>Período:</h3>
+              <p> 1º Semestre - Inicio em março 2023</p>
+              <h3>Instituição:</h3>
+              <p> Faculdade Metropolitana</p>
+            </div>
+          </div>
         </section>
       </section>
 
-      <section class="projetos" id="projetos" data-section>
+      <section class="projetos" id="projetos" data-section data-js-section>
         <div class="projetos-center" data-center>
           <h2 class="titulo-section">PROJETOS</h2>
 
@@ -141,7 +161,7 @@
         </div>
       </section>
 
-      <section class="habilidades" id="habilidades" data-section>
+      <section class="habilidades" id="habilidades" data-section data-js-section>
         <div class="habilidades-center" data-center>
           <h2 class="titulo-section">HABILIDADES</h2>
 
@@ -149,7 +169,7 @@
             <div class="card-habilidades card1">
               <div class="titulo">Front-End</div>
 
-              <div class="grid-habilidade">
+              <div class="grid-habilidade" data-js-grid-habilidade>
                 <span>GIT e GITHUB</span>
                 <span>50%</span>
                 <div class="barrinha github">
@@ -157,7 +177,7 @@
                 </div>
               </div>
 
-              <div class="grid-habilidade">
+              <div class="grid-habilidade" data-js-grid-habilidade>
                 <span>HTML e CSS</span>
                 <span>70%</span>
                 <div class="barrinha htmlecss">
@@ -165,7 +185,7 @@
                 </div>
               </div>
 
-              <div class="grid-habilidade">
+              <div class="grid-habilidade" data-js-grid-habilidade>
                 <span>SASS</span>
                 <span>50%</span>
                 <div class="barrinha sass">
@@ -173,7 +193,7 @@
                 </div>
               </div>
 
-              <div class="grid-habilidade">
+              <div class="grid-habilidade" data-js-grid-habilidade>
                 <span>JAVASCRIPT</span>
                 <span>50%</span>
                 <div class="barrinha javascript">
@@ -181,7 +201,7 @@
                 </div>
               </div>
 
-              <div class="grid-habilidade">
+              <div class="grid-habilidade" data-js-grid-habilidade>
                 <span>TYPESCRIPT</span>
                 <span>50%</span>
                 <div class="barrinha typescript">
@@ -189,7 +209,7 @@
                 </div>
               </div>
 
-              <div class="grid-habilidade">
+              <div class="grid-habilidade" data-js-grid-habilidade>
                 <span>BOOTSTRAP</span>
                 <span>0%</span>
                 <div class="barrinha bootstrap">
@@ -197,7 +217,7 @@
                 </div>
               </div>
 
-              <div class="grid-habilidade">
+              <div class="grid-habilidade" data-js-grid-habilidade>
                 <span>REACT</span>
                 <span>0%</span>
                 <div class="barrinha react">
@@ -205,7 +225,7 @@
                 </div>
               </div>
 
-              <div class="grid-habilidade">
+              <div class="grid-habilidade" data-js-grid-habilidade>
                 <span>PHOTOSHOP</span>
                 <span>50%</span>
                 <div class="barrinha photoshop">
@@ -217,14 +237,15 @@
             <div class="card-habilidades card2">
               <div class="titulo">Back-End</div>
 
-              <div class="grid-habilidade">
+              <div class="grid-habilidade" data-js-grid-habilidade>
                 <span>Banco de Dados (Mysql)</span>
                 <span>50%</span>
                 <div class="barrinha bancodedados">
                   <div></div>
                 </div>
               </div>
-              <div class="grid-habilidade">
+
+              <div class="grid-habilidade" data-js-grid-habilidade>
                 <span>PHP</span>
                 <span>10%</span>
                 <div class="barrinha php">
@@ -232,7 +253,7 @@
                 </div>
               </div>
 
-              <div class="grid-habilidade">
+              <div class="grid-habilidade" data-js-grid-habilidade>
                 <span>Node Js</span>
                 <span>0%</span>
                 <div class="barrinha nodejs">
@@ -244,8 +265,9 @@
         </div>
       </section>
     </main>
+
     <footer>
-      <section class="contato" id="contato" data-section>
+      <section class="contato" id="contato" data-section data-js-section>
         <div class="contato-center" data-center>
           <h2 class="titulo-section">CONTATO</h2>
 
