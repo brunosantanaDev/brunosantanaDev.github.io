@@ -65,7 +65,7 @@ body {
   z-index: 300;
 
   .menu-center {
-    padding:0; //reset padding padrao do data-center
+    padding:0; //reset padrao do [data-center]
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -188,6 +188,12 @@ body {
           top:80px;
           right:0;
 
+          &.ativo{
+            display: block;
+            width: 100%;
+            opacity: 1;
+          }
+
           a{
             display: flex;
             justify-content: center;
@@ -197,13 +203,8 @@ body {
             color: #000;
             border-bottom: 1px solid $segunda-cor;
           }
-         
-          &.ativo{
-            display: block;
-            width: 70%;
-            opacity: 1;
-          }
         }
+
         @include responsivo(celular){
           display: block;
           width: 0%;
@@ -216,6 +217,12 @@ body {
           overflow: hidden;
           top:80px;
           right:0;
+
+          &.ativo{
+            display: block;
+            width: 100%;
+            opacity: 1;
+          }
          
           a{
             display: flex;
@@ -226,12 +233,7 @@ body {
             color: #000;
             border-bottom: 1px solid $segunda-cor;
           }
-         
-          &.ativo{
-            display: block;
-            width: 70%;
-            opacity: 1;
-          }
+
         }
       }
 
