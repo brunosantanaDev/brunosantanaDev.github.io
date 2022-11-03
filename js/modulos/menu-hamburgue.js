@@ -6,9 +6,7 @@ export default function initMenuHamburgue(){
   if(links && menuBurguer){
     function handleOpenMenu(){
       this.classList.add("ativo");
-      links.classList.add("ativo");
-      document.body.style.overflow = "hidden";
-      
+      links.classList.add("ativo");      
       outsideClick(links, eventos, () => {
         this.classList.remove("ativo");
         links.classList.remove("ativo");
@@ -46,7 +44,6 @@ export default function initMenuHamburgue(){
 
         clickLink.forEach(link => {
           if(link == event.target){
-            document.body.removeAttribute("style");
             links.removeAttribute("data-outside");
             links.classList.remove("ativo");
             menuBurguer.classList.remove("ativo");

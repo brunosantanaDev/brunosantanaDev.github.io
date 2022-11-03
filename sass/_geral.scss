@@ -484,7 +484,7 @@ body {
         padding: 10px;
 
       h3{
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 10px;
       }
 
@@ -492,6 +492,7 @@ body {
         line-height: lineheight(14);
         margin-bottom: 20px;
         color: $texto-cor-segunda;
+        line-height: lineheight(16);
       }
 
       @include responsivo(celular){
@@ -504,10 +505,12 @@ body {
 
     .sobre-card:nth-child(1){
       border-bottom: 2px solid #d3d3d3;
+
       @include responsivo(celular){
        order: 1;
       border-bottom: 2px solid #d3d3d3;
       }
+
       @include responsivo(tablet){
        order: 1;
       border-bottom: 0px solid #d3d3d3;
@@ -516,19 +519,21 @@ body {
 
     .sobre-card:nth-child(2){
 
+      @include responsivo(celular){
+        order: 0;
+      }
+
+      @include responsivo(tablet){
+        order: 0;
+      }
+
       img{
         transform: scale();
         transition: .5s;
       }
+
       img:hover{
         transform: scale(1.2);
-      }
-
-      @include responsivo(celular){
-        order: 0;
-      }
-      @include responsivo(tablet){
-        order: 0;
       }
     }
 
