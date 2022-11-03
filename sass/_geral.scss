@@ -12,6 +12,20 @@
   word-wrap: break-word;
 }
 
+  *::-webkit-scrollbar{
+	  width:12px;
+  }
+
+ *::-webkit-scrollbar-track{
+    background: $primeira-cor;
+ }
+
+ *::-webkit-scrollbar-thumb{
+    background-color:$segunda-cor;
+	  border-radius: 10px;
+    border:4px solid $primeira-cor;
+ }
+
 
 body {
   font-family: "Open Sans", "Poppins", sans-serif;
