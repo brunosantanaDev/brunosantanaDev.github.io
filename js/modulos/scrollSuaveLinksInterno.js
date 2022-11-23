@@ -18,7 +18,6 @@ export default function initScrollSuaveLinkInterno() {
 
       if(!menu_links.contains(event.target)){
           bookmark.classList.remove("ativo");
-          bookmark.removeAttribute("class")/
           links[0].classList.add("ativo");
       }
     }

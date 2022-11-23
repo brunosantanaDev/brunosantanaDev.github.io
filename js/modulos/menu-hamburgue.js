@@ -31,7 +31,6 @@ export default function initMenuHamburgue(){
 
       function removeAlls(event){
         if(!element.contains(event.target)){
-          document.body.removeAttribute("style");
           element.removeAttribute("data-outside");
           callbackRemove();
 

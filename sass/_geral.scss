@@ -88,7 +88,7 @@ body {
       display: none;
       max-width: 30px;
       height: auto;
-      padding: 12px 0px;
+      padding: 12px 0;
       cursor: pointer;
 
       @include responsivo(tablet){
@@ -118,16 +118,15 @@ body {
       height: 3px;
       background-color: #fff;
       position:relative;
+      transition: all .5s;
     }
 
     .menu-hamburguer:before {
       top: -7px;
-      transition: all .5s;
     }  
 
     .menu-hamburguer:after {
       top: 5px;
-      transition: all .5s;
     }
 
    .pointer-hamburguer.ativo{
@@ -193,7 +192,7 @@ body {
           display: block;
           width: 0%;
           opacity: 0;
-          transition: .3s;
+          transition: .5s;
           height: 100vh;
           background-color: $quarta-cor;
           position: absolute;
